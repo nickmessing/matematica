@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "Nicolai Moraru <dot.nick.dot.messing@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@mdit/plugin-katex": "^0.13.1",
     "vitepress": "^1.4.1"
   }
