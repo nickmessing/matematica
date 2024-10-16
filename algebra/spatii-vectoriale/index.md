@@ -2,7 +2,7 @@
 
 ## Definiție
 
-Un **spațiu vectorial** (sau **spațiu liniar**) peste un corp $\mathbb{K}$ este o [mulțime](http://localhost:5173/teorie/multime.html) $V$ împreună cu două operații: **adunarea vectorilor** și **înmulțirea unui vector cu un scalar**, care satisfac următoarele proprietăți:
+Un **spațiu vectorial** (sau **spațiu liniar**) peste un corp $\mathbb{K}$ este o [mulțime](/teorie/multime) $V$ împreună cu două operații: **adunarea vectorilor** și **înmulțirea unui vector cu un scalar**, care satisfac următoarele proprietăți:
 
 1. **Adunarea Vectorilor**: Există o operație $+$ astfel încât $\forall u, v \in V$, rezultatul $u + v \in V$ (spațiul este **închis** la adunare).
 

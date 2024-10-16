@@ -13,7 +13,7 @@ Categoria **Matematică Fundamentală** reprezintă baza matematicii moderne și
 **Conținutul include:**
 
 - [Definiția unei mulțimi](/teorie/multime#definitie).
-- [Operații cu mulțimi](/teorie/multime#operatii-cu-multimi): [reuniunea](/teorie/multime#reuniunea), [intersecția](http://localhost:5173/teorie/multime#intersectia), [diferența](http://localhost:5173/teorie/multime#intersectia).
+- [Operații cu mulțimi](/teorie/multime#operatii-cu-multimi): [reuniunea](/teorie/multime#reuniunea), [intersecția](/teorie/multime#intersectia), [diferența](/teorie/multime#intersectia).
 - [Conceptul de submulțime și includerea](/teorie/multime#submultimi-si-incluziune).
 - [Cardinalul unei mulțimi și proprietățile acestuia](/teorie/multime#cardinalul-unei-multimi).
 

@@ -2,7 +2,7 @@
 
 ## Definiție
 
-Spațiul vectorial **$\mathbb{R}^n$** este un exemplu clasic de [spațiu vectorial](/algebra/spatii-vectoriale) peste corpul numerelor reale $\mathbb{R}$. Acesta constă din mulțimea **multipletelor ordonate** de $n$ numere reale, notate astfel:
+Spațiul vectorial **$\mathbb{R}^n$** este un exemplu clasic de [spațiu vectorial](/algebra/spatii-vectoriale/) peste corpul numerelor reale $\mathbb{R}$. Acesta constă din mulțimea **multipletelor ordonate** de $n$ numere reale, notate astfel:
 
 $$
 \mathbb{R}^n = \{ (x_1, x_2, \ldots, x_n) \mid x_1, x_2, \ldots, x_n \in \mathbb{R}, n \in \mathbb{N}_+ \}.
@@ -12,7 +12,7 @@ Cu alte cuvinte, fiecare element al $\mathbb{R}^n$ este un **vector** format din
 
 ## Operațiile în $\mathbb{R}^n$
 
-Spațiul $\mathbb{R}^n$ este definit prin două operații fundamentale: **adunarea vectorilor** și **înmulțirea unui vector cu un scalar**. Aceste operații trebuie să respecte axiomele unui [spațiu vectorial](/algebra/spatii-vectoriale).
+Spațiul $\mathbb{R}^n$ este definit prin două operații fundamentale: **adunarea vectorilor** și **înmulțirea unui vector cu un scalar**. Aceste operații trebuie să respecte axiomele unui [spațiu vectorial](/algebra/spatii-vectoriale/).
 
 ### 1. Adunarea vectorilor
 
