@@ -10,9 +10,16 @@ export default defineConfig({
     nav: [
       { text: 'Algebră', link: '/algebra' },
       { text: 'Geometrie', link: '/geometrie' },
+      { text: 'Notații', link: '/symbols' },
     ],
 
     sidebar: {
+      '/algebra/': [
+        {
+          text: 'Algebră Liniară',
+          items: [{ text: 'Matricea unei Forme Pătratice', link: '/algebra/matricea-formei-patratice' }],
+        },
+      ],
       '/geometrie/': [
         {
           text: 'Geometrie Afină',
@@ -27,10 +34,11 @@ export default defineConfig({
       provider: 'local',
     },
   },
+  head: [['link', { rel: 'stylesheet', href: 'https://esm.sh/v135/katex@0.16.11/dist/katex.min.css' }]],
   markdown: {
     config: md => {
       md.use(katex, {
-        output: 'mathml',
+        output: 'html',
       })
     },
   },
