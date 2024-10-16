@@ -22,7 +22,41 @@ Mulțimea numerelor naturale strict pozitive.
 
 #### **$n$** {#numar-natural}
 
-Un număr natural, de obicei reprezentând dimensiunea unui spațiu vectorial sau numărul de variabile.
+Un număr natural, de obicei reprezentând dimensiunea unui [spațiu vectorial](#spatiu-vectorial) sau numărul de variabile.
+
+## Spații Vectoriale Specifice
+
+#### **$\mathbb{R}^n$** {#spatiul-vectorial-rn}
+
+Spațiul vectorial de dimensiune $n$, format din multiplete ordonate de $n$ numere reale $(x_1, x_2, \ldots, x_n)$, unde $x_1, x_2, \ldots, x_n \in \mathbb{R}$. Este unul dintre cele mai utilizate exemple de spații vectoriale în matematică și fizică.
+
+#### **$\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n$** {#baza-standard-rn}
+
+Baza standard a spațiului $\mathbb{R}^n$, definită ca:
+
+$$
+\mathbf{e}_1 = (1, 0, \ldots, 0), \quad \mathbf{e}_2 = (0, 1, \ldots, 0), \ldots, \quad \mathbf{e}_n = (0, 0, \ldots, 1).
+$$
+
+#### **$x = (x_1, x_2, \ldots, x_n)$** {#vector-rn}
+
+Un vector din spațiul $\mathbb{R}^n$ reprezentat de $n$ coordonate reale $(x_1, x_2, \ldots, x_n)$.
+
+#### **$||x||$** {#norma-vector-rn}
+
+Norma (lungimea) unui vector $x = (x_1, x_2, \ldots, x_n)$ din $\mathbb{R}^n$, definită ca:
+
+$$
+||x|| = \sqrt{x_1^2 + x_2^2 + \ldots + x_n^2}.
+$$
+
+#### **$d(x, y)$** {#distanta-vector-rn}
+
+Distanța dintre doi vectori $x = (x_1, x_2, \ldots, x_n)$ și $y = (y_1, y_2, \ldots, y_n)$ din $\mathbb{R}^n$, definită prin:
+
+$$
+d(x, y) = \sqrt{(x_1 - y_1)^2 + (x_2 - y_2)^2 + \ldots + (x_n - y_n)^2}.
+$$
 
 ## Spații și Structuri Matematice
 
@@ -34,7 +68,7 @@ Un [**spațiu afin**](/geometrie/spatii-afine), o mulțime de puncte.
 
 #### **$V$** {#spatiu-vectorial}
 
-Un **spațiu vectorial** asociat cu spațiul afin [$A$](#spatiu-afin), numit **spațiu vectorial director** sau **spațiu vectorial asociat**.
+Un [**spațiu vectorial**](/symbols#spatiu-vectorial) asociat cu spațiul afin [$A$](#spatiu-afin), numit **spațiu vectorial director** sau **spațiu vectorial asociat**.
 
 #### **$\dim(A)$** {#dimensiunea-spatiului-afin}
 
@@ -48,7 +82,7 @@ Dimensiunea spațiului vectorial [$V$](#spatiu-vectorial).
 
 #### **$O$** {#originea}
 
-Un punct fix din [$A$](#spatiu-afin), numit **originea** unui reper afin.
+Un punct fix din [$A$](#spatiu-afin), numit **originea** unui [reper afin](#reper-afin).
 
 #### **$M, N, P, Q$** {#puncte}
 
@@ -78,7 +112,7 @@ O **bază ordonată** de vectori din [$V$](#spatiu-vectorial).
 
 #### **$O_{\mathbf{e}_1 \mathbf{e}_2 \ldots \mathbf{e}_n}$** {#reper-afin}
 
-Notarea unui **reper afin** cu originea în [$O$](#originea) și baza [$\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n$](#baza-ordonata).
+Notarea unui **[reper afin](/geometrie/spatii-afine#sisteme-de-coordonate-afine-repere-afine)** cu originea în [$O$](#originea) și baza [$\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n$](#baza-ordonata).
 
 #### **$M(x_1, x_2, \ldots, x_n)$** {#coordonatele-punctului}
 
@@ -176,7 +210,7 @@ Unghiul dintre doi vectori în spațiul euclidian.
 
 #### **Spațiu vectorial euclidian** {#spatiu-vectorial-euclidian}
 
-Un spațiu vectorial [$V$](#spatiu-vectorial) echipat cu un produs scalar.
+Un spațiu vectorial [$V$](#spatiu-vectorial) echipat cu un [produs scalar](#produs-scalar).
 
 #### **Reper ortonormat** {#reper-ortonormat}
 
@@ -224,7 +258,7 @@ $$
 
 #### **$Q: V \to \mathbb{R}$** {#forma-patratica}
 
-O **formă pătratică** pe spațiul vectorial [$V$](#spatiu-vectorial), funcție care asociază fiecărui vector $\mathbf{x} \in V$ un număr real $Q(\mathbf{x})$.
+O [**formă pătratică**](/algebra/matricea-formei-patratice#definitia-formei-patratice) pe spațiul vectorial [$V$](#spatiu-vectorial), funcție care asociază fiecărui vector $\mathbf{x} \in V$ un număr real $Q(\mathbf{x})$.
 
 #### **Formă biliniară asociată $B$** {#forma-bilinara}
 

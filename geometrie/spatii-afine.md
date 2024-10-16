@@ -6,13 +6,13 @@ Geometria afină este ramura matematicii care studiază proprietățile geometri
 
 ## Definiția Spațiului Afin
 
-Un **spațiu afin** $A$ este o mulțime nevidă ale cărei elemente se numesc **puncte**, împreună cu:
+Un **spațiu afin** $\mathcal{A}$ este o mulțime nevidă ale cărei elemente se numesc **puncte**, împreună cu:
 
-- Un spațiu vectorial $V$, numit **spațiu vectorial director** sau **spațiu vectorial asociat**.
+- Un [spațiu vectorial](/symbols#spatiu-vectorial) $V$, numit **spațiu vectorial director** sau **spațiu vectorial asociat**.
 - O aplicație:
 
   $$
-  \varphi: A \times A \to V, \quad (A, B) \mapsto \overrightarrow{AB},
+  \varphi: \mathcal{A} \times \mathcal{A} \to V, \quad (A, B) \mapsto \overrightarrow{AB},
   $$
 
   care asociază fiecărui bipunct $(A, B)$ vectorul $\overrightarrow{AB} \in V$, astfel încât sunt îndeplinite următoarele condiții:
@@ -21,7 +21,7 @@ Un **spațiu afin** $A$ este o mulțime nevidă ale cărei elemente se numesc **
 
 1. **Există Unicitatea Translației**:
 
-   Pentru orice punct $A \in A$ și orice vector $\mathbf{v} \in V$, există un unic punct $B \in A$ astfel încât:
+   Pentru orice punct $A \in \mathcal{A}$ și orice vector $\mathbf{v} \in V$, există un unic punct $B \in \mathcal{A}$ astfel încât:
 
    $$
    \overrightarrow{AB} = \mathbf{v}.
@@ -31,7 +31,7 @@ Un **spațiu afin** $A$ este o mulțime nevidă ale cărei elemente se numesc **
 
 2. **Regula Triunghiului**:
 
-   Pentru orice puncte $A, B, C \in A$, se verifică:
+   Pentru orice puncte $A, B, C \in \mathcal{A}$, se verifică:
 
    $$
    \overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}.
@@ -39,16 +39,16 @@ Un **spațiu afin** $A$ este o mulțime nevidă ale cărei elemente se numesc **
 
 ### Observații
 
-- **Vectorul Zero**: Pentru orice punct $A \in A$, avem $\overrightarrow{AA} = \mathbf{0}$, unde $\mathbf{0}$ este vectorul zero din $V$.
-- **Opoziția Vectorilor**: Pentru orice $A, B \in A$, se îndeplinește $\overrightarrow{AB} = -\overrightarrow{BA}$.
-- **Bijectivitatea Aplicației**: Pentru un punct fix $A \in A$, aplicația $\varphi(A, \cdot): A \to V$ definită prin $B \mapsto \overrightarrow{AB}$ este bijectivă.
+- **Vectorul Zero**: Pentru orice punct $A \in \mathcal{A}$, avem $\overrightarrow{AA} = \mathbf{0}$, unde $\mathbf{0}$ este [vectorul zero](/symbols#vectorul-zero) din $V$.
+- **Opoziția Vectorilor**: Pentru orice $A, B \in \mathcal{A}$, se îndeplinește $\overrightarrow{AB} = -\overrightarrow{BA}$.
+- **Bijectivitatea Aplicației**: Pentru un punct fix $A \in \mathcal{A}$, aplicația $\varphi(A, \cdot): \mathcal{A} \to V$ definită prin $B \mapsto \overrightarrow{AB}$ este bijectivă.
 
 ## Dimensiunea Spațiului Afin
 
-Dimensiunea spațiului afin $A$ este egală cu dimensiunea spațiului vectorial director $V$:
+Dimensiunea spațiului afin $\mathcal{A}$ este egală cu dimensiunea spațiului vectorial director $V$:
 
 $$
-\dim(A) = \dim(V).
+\dim(\mathcal{A}) = \dim(V).
 $$
 
 Aceasta reflectă numărul de direcții independente în care ne putem deplasa în spațiul afin.
@@ -57,19 +57,19 @@ Aceasta reflectă numărul de direcții independente în care ne putem deplasa �
 
 ### Definiție
 
-Un **reper afin** sau **sistem de coordonate afin** al spațiului $A$ este un cuplu format din:
+Un **reper afin** sau **sistem de coordonate afin** al spațiului $\mathcal{A}$ este un cuplu format din:
 
-1. **Originea Reperului**: Un punct fix $O \in A$.
-2. **Baza Ordonată**: O bază ordonată $(\mathbf{e_1}, \mathbf{e_2}\, \ldots, \mathbf{e_n})$ a spațiului vectorial $V$.
+1. **Originea Reperului**: Un punct fix $O \in \mathcal{A}$.
+2. **Baza Ordonată**: O [bază ordonată](/symbols#baza-ordonata) $(\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n)$ a spațiului vectorial $V$.
 
-Reperul se notează $O_{\mathbf{e_1} \mathbf{e_2} \ldots \mathbf{e_n}}$.
+Reperul se notează $O_{\mathbf{e}_1 \mathbf{e}_2 \ldots \mathbf{e}_n}$.
 
 ### Vectorul de Poziție și Coordonatele unui Punct
 
-Pentru orice punct $M \in A$, **vectorul de poziție** $\overrightarrow{OM}$ se exprimă unic în baza $(\mathbf{e_1}, \mathbf{e_2}, \ldots, \mathbf{e_n})$:
+Pentru orice punct $M \in \mathcal{A}$, **vectorul de poziție** $\overrightarrow{OM}$ se exprimă unic în baza $(\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n)$:
 
 $$
-\overrightarrow{OM} = x_1 \mathbf{e_1} + x_2 \mathbf{e_2} + \ldots + x_n \mathbf{e_n}.
+\overrightarrow{OM} = x_1 \mathbf{e}_1 + x_2 \mathbf{e}_2 + \ldots + x_n \mathbf{e}_n.
 $$
 
 Numerele reale $x_1, x_2, \ldots, x_n$ sunt **coordonatele** punctului $M$ în reperul ales și se notează $M(x_1, x_2, \ldots, x_n)$.
@@ -106,7 +106,7 @@ Astfel, coordonatele vectorului $\overrightarrow{MN}$ sunt diferențele coordona
 
 ### Definiție
 
-Fie $M_1, M_2 \in A$ două puncte distincte și $\lambda \in \mathbb{R}$. Punctul $M \in A$ împarte segmentul $[M_1, M_2]$ în raportul $\lambda$ dacă:
+Fie $M_1, M_2 \in \mathcal{A}$ două puncte distincte și $\lambda \in \mathbb{R}$. Punctul $M \in \mathcal{A}$ împarte segmentul $[M_1, M_2]$ în raportul $\lambda$ dacă:
 
 $$
 \overrightarrow{M_1 M} = \lambda \overrightarrow{M M_2}.
@@ -136,7 +136,7 @@ $$
 
 ## Spațiul Afin Euclidian
 
-Pentru a măsura distanțe și unghiuri în spațiul afin, echipăm spațiul vectorial director $V$ cu un **produs scalar**, transformându-l într-un **spațiu vectorial euclidian**. Astfel, spațiul afin $A$ devine un **spațiu afin euclidian**.
+Pentru a măsura distanțe și unghiuri în spațiul afin, echipăm spațiul vectorial director $V$ cu un **produs scalar**, transformându-l într-un [spațiu vectorial euclidian](/symbols#spatiu-vectorial-euclidian). Astfel, spațiul afin $\mathcal{A}$ devine un **spațiu afin euclidian**.
 
 ### Definiție: Produsul Scalar
 
@@ -148,8 +148,8 @@ $$
 
 unde:
 
-- $||\mathbf{x}||$ este norma (lungimea) vectorului $\mathbf{x}$.
-- $\theta$ este unghiul dintre vectorii $\mathbf{x}$ și $\mathbf{y}$.
+- $||\mathbf{x}||$ este [norma](#norma-vector) (lungimea) vectorului $\mathbf{x}$.
+- $\theta$ este [unghiul](#unghi) dintre vectorii $\mathbf{x}$ și $\mathbf{y}$.
 
 Dacă cel puțin unul dintre vectori este nul, atunci:
 
@@ -197,10 +197,10 @@ $$
 
 ### Reperul Ortonormat
 
-Un reper $O_{\mathbf{e}_1 \mathbf{e}_2 \ldots \mathbf{e}_n}$ este **ortonormat** dacă baza $(\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n)$ este ortonormată, adică:
+Un reper $O_{\mathbf{e}_1 \mathbf{e}_2 \ldots \mathbf{e}_n}$ este **ortonormat** dacă baza $(\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n)$ este [ortonormată](/symbols#reper-ortonormat), adică:
 
 $$
-(\mathbf{e}_i, \mathbf{e}_j) = \begin{cases} 1, & \text{dacă } i = j, \\ 0, & \text{dacă } i \ne j. \end{cases}
+(\mathbf{e}_i, \mathbf{e}_j) = \delta_{ij} = \begin{cases} 1, & \text{dacă } i = j, \\ 0, & \text{dacă } i \ne j. \end{cases}
 $$
 
 Într-un reper ortonormat:
@@ -210,13 +210,13 @@ $$
 
 ### Distanța Între Două Puncte
 
-În spațiul afin euclidian, **distanța** dintre două puncte $A, B \in A$ este:
+În spațiul afin euclidian, **distanța** dintre două puncte $A, B \in \mathcal{A}$ este:
 
 $$
 \rho(A, B) = ||\overrightarrow{AB}|| = \sqrt{(\overrightarrow{AB}, \overrightarrow{AB})}.
 $$
 
-Într-un reper ortonormat, pentru $A(a_1, a_2, \ldots, a_n)$ și $B(b_1, b_2, \ldots, b_n)$:
+Într-un reper ortonormat, pentru $A(a_1, a_2, \ldots, a_n)$ și $B(b_1, b_2, b_3)$:
 
 $$
 \rho(A, B) = \sqrt{(b_1 - a_1)^2 + (b_2 - a_2)^2 + \ldots + (b_n - a_n)^2}.
@@ -224,13 +224,13 @@ $$
 
 ### Inegalitatea Triunghiului
 
-Pentru orice $A, B, C \in A$, se verifică:
+Pentru orice $A, B, C \in \mathcal{A}$, se verifică:
 
 $$
 \rho(A, C) \leq \rho(A, B) + \rho(B, C).
 $$
 
-Aceasta este **inegalitatea triunghiului**, o proprietate fundamentală în geometrie.
+Aceasta este **[inegalitatea triunghiului](/symbols#inegalitatea-triunghiului)**, o proprietate fundamentală în geometrie.
 
 ## Orientarea Spațiului Afin
 
@@ -244,7 +244,6 @@ $$
 \mathbf{e}'_1 & \ldots & \mathbf{e}'_n \\
 | & & |
 \end{pmatrix}
-
 > 0.
 $$
 
@@ -256,11 +255,11 @@ Relația "a fi la fel orientate" este o **relație de echivalență** pe mulțim
 
 ### Orientarea Spațiului Afin
 
-Spațiul vectorial $V$ se numește **orientat** dacă este fixată una dintre cele două orientări. Spațiul afin $A$ se numește **orientat** dacă spațiul său vectorial director $V$ este orientat.
+Spațiul vectorial $V$ se numește **orientat** dacă este fixată una dintre cele două orientări. Spațiul afin $\mathcal{A}$ se numește **orientat** dacă spațiul său vectorial director $V$ este orientat.
 
 **Notă:**
 
-- Pentru a orienta spațiul afin $A$, se fixează un reper $O_{\mathbf{e}_1 \mathbf{e}_2 \ldots \mathbf{e}_n}$ și se consideră orientarea determinată de baza $(\mathbf{e}_1, \ldots, \mathbf{e}_n)$.
+- Pentru a orienta spațiul afin $\mathcal{A}$, se fixează un reper $O_{\mathbf{e}_1 \mathbf{e}_2 \ldots \mathbf{e}_n}$ și se consideră orientarea determinată de baza $(\mathbf{e}_1, \ldots, \mathbf{e}_n)$.
 
 ## Exemple
 
@@ -268,10 +267,10 @@ Spațiul vectorial $V$ se numește **orientat** dacă este fixată una dintre ce
 
 Fie $n \in \mathbb{N}_+$. Considerăm:
 
-- $A = \mathbb{R}^{1 \times n}$: spațiul vectorilor linie (matrici de dimensiune $1 \times n$).
+- $\mathcal{A} = \mathbb{R}^{1 \times n}$: spațiul vectorilor linie (matrici de dimensiune $1 \times n$).
 - $V = \mathbb{R}^{n \times 1}$: spațiul vectorilor coloană (matrici de dimensiune $n \times 1$).
 
-Pentru $A = (a_1, a_2, \ldots, a_n)$ și $B = (b_1, b_2, \ldots, b_n)$ în $A$, vectorul $\overrightarrow{AB}$ este:
+Pentru $A = (a_1, a_2, \ldots, a_n)$ și $B = (b_1, b_2, \ldots, b_n)$ în $\mathcal{A}$, vectorul $\overrightarrow{AB}$ este:
 
 $$
 \overrightarrow{AB} = \begin{pmatrix}
@@ -284,14 +283,14 @@ $$
 
 ### Exemplul 2: Spațiul Vectorial ca Spațiu Afin
 
-Fie $V$ un spațiu vectorial. Dacă luăm $A = V$ și definim:
+Fie $V$ un spațiu vectorial. Dacă luăm $\mathcal{A} = V$ și definim:
 
-- Pentru $a, b \in A$, $\overrightarrow{ab} = b - a$.
+- Pentru $a, b \in \mathcal{A}$, $\overrightarrow{ab} = b - a$.
 
 Atunci:
 
-- Pentru $a \in A$ și $\mathbf{v} \in V$, $b = a + \mathbf{v}$.
-- Pentru orice $a, b, c \in A$:
+- Pentru $a \in \mathcal{A}$ și $\mathbf{v} \in V$, $b = a + \mathbf{v}$.
+- Pentru orice $a, b, c \in \mathcal{A}$:
 
   $$
   \overrightarrow{ac} = \overrightarrow{ab} + \overrightarrow{bc}.
