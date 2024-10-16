@@ -7,7 +7,7 @@ settings:
 importers:
 
   .:
-    devDependencies:
+    dependencies:
       '@mdit/plugin-katex':
         specifier: ^0.13.1
         version: 0.13.1
