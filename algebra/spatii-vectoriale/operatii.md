@@ -81,20 +81,212 @@ Un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din $V$
 
    este $\alpha_1 = \alpha_2 = \alpha_3 = 0$. Astfel, vectorii sunt liniar independenți.
 
-## Span-ul unui Set de Vectori
+### Metoda Determinării Dependenței Liniare prin Rangul Matricei
+
+#### Definiție
+
+Pentru un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din spațiul vectorial $V$, putem forma matricea $A$ având vectorii ca coloane (sau linii). **Rangul** matricei $A$ este egal cu numărul maxim de vectori liniar independenți dintre $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n$.
+
+#### Criteriu
+
+- **Dacă rangul matricei $A$ este egal cu numărul de vectori $n$, atunci vectorii sunt liniar independenți.**
+- **Dacă rangul matricei $A$ este mai mic decât $n$, atunci vectorii sunt liniar dependenți.**
+
+[Vezi secțiunea **Rangul unei Matrice și Dependența Liniară**](/algebra/operatii-si-proprietati-in-spatii-vectoriale#rangul-unei-matrice-și-dependența-liniară)
+
+## Subspațiul Generat (Anvelopa Liniară) a unui Set de Vectori
 
 ### Definiție
 
-**Span-ul** (întinderea) unui set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ este mulțimea tuturor combinațiilor liniare posibile ale acestora:
+Fie $V$ un spațiu vectorial peste corpul $\mathbb{K}$ și fie $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ un set de vectori din $V$. **Subspațiul generat** sau **anvelopa liniară** (notăm, **sg**) a acestor vectori este mulțimea tuturor combinațiilor liniare posibile ale lor:
 
 $$
-\text{Span}\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\} = \left\{ \mathbf{v} \in V \mid \mathbf{v} = \sum_{i=1}^n \alpha_i \mathbf{v}_i, \ \alpha_i \in \mathbb{K} \right\}.
+\text{sg}(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n) = \left\{ \mathbf{v} \in V \mid \mathbf{v} = \sum_{i=1}^n \alpha_i \mathbf{v}_i, \ \alpha_i \in \mathbb{K} \right\}.
 $$
+
+Acest subspațiu este cel mai mic subspațiu vectorial al lui $V$ care conține vectorii $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n$.
 
 ### Proprietăți
 
-- Span-ul unui set de vectori este un **subspațiu vectorial** al lui $V$.
-- Dacă $V = \text{Span}\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$, atunci vectorii $\mathbf{v}_i$ **generează** spațiul $V$.
+- **Subspațiu Vectorial**: $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n)$ este un subspațiu vectorial al lui $V$.
+- **Închidere la Combinații Liniare**: Orice combinație liniară a vectorilor din $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n)$ este, de asemenea, în $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n)$.
+- **Minimalitate**: Dacă $W$ este un subspațiu vectorial al lui $V$ care conține vectorii $\mathbf{v}_1, \ldots, \mathbf{v}_n$, atunci $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n) \subseteq W$.
+
+### Exemple
+
+1. **În $\mathbb{R}^2$**
+
+   Fie vectorii $\mathbf{v}_1 = (1, 0)$ și $\mathbf{v}_2 = (0, 1)$. Atunci:
+
+   $$
+   \text{sg}(\mathbf{v}_1, \mathbf{v}_2) = \mathbb{R}^2.
+   $$
+
+   Orice vector din $\mathbb{R}^2$ poate fi exprimat ca o combinație liniară a lui $\mathbf{v}_1$ și $\mathbf{v}_2$.
+
+2. **Vectori Coliniari în $\mathbb{R}^2$**
+
+   Fie $\mathbf{v}_1 = (1, 2)$ și $\mathbf{v}_2 = (2, 4)$. Observăm că $\mathbf{v}_2 = 2\mathbf{v}_1$. Atunci:
+
+   $$
+   \text{sg}(\mathbf{v}_1, \mathbf{v}_2) = \left\{ \alpha \mathbf{v}_1 \mid \alpha \in \mathbb{R} \right\},
+   $$
+
+   care este o dreaptă prin origine în $\mathbb{R}^2$.
+
+3. **Funcții în Spațiul $C[0,1]$**
+
+   Fie $f_1(x) = \sin x$ și $f_2(x) = \cos x$. Atunci, subspațiul generat de aceste funcții este:
+
+   $$
+   \text{sg}(f_1, f_2) = \left\{ f \mid f(x) = \alpha \sin x + \beta \cos x, \ \alpha, \beta \in \mathbb{R} \right\}.
+   $$
+
+### Observații
+
+- Dacă $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n) = V$, atunci se spune că vectorii $\mathbf{v}_1, \ldots, \mathbf{v}_n$ **generează** spațiul $V$.
+- În cazul în care setul de vectori este liniar dependent, subspațiul generat poate fi de dimensiune mai mică decât numărul vectorilor.
+
+### Relația cu Baza Spațiului Vectorial
+
+O **bază** a spațiului vectorial $V$ este un set de vectori liniar independenți care generează $V$. Cu alte cuvinte, dacă vectorii $\mathbf{v}_1, \ldots, \mathbf{v}_n$ sunt liniar independenți și $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n) = V$, atunci $\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$ este o bază a lui $V$.
+
+### Teorema Subspațiului Generat de o Submulțime a Spațiului Vectorial
+
+Fie $V$ un spațiu vectorial peste corpul $\mathbb{K}$ și $X \subseteq V$ o submulțime (posibil infinită) a lui $V$. Atunci:
+
+1. **Dacă $X$ este mulțimea vidă sau $\{ \mathbf{0} \}$**:
+
+   $$
+   \text{sg}(X) = \{ \mathbf{0} \}.
+   $$
+
+   **Explicație:**
+
+   - Mulțimea vidă nu conține niciun vector, deci singura combinație liniară posibilă este vectorul zero.
+   - Dacă $X = \{ \mathbf{0} \}$, orice combinație liniară a vectorului zero este tot vectorul zero, deoarece $\alpha \mathbf{0} = \mathbf{0}$ pentru orice scalar $\alpha$.
+
+2. **Dacă $X$ nu este mulțimea vidă și nu conține doar vectorul zero**:
+
+   $$
+   \text{sg}(X) = \left\{ \sum_{i=1}^n \alpha_i \mathbf{x}_i \mid \mathbf{x}_i \in X, \ \alpha_i \in \mathbb{K}, \ n \in \mathbb{N}_+ \right\}.
+   $$
+
+   **Explicație:**
+
+   - Subspațiul generat de $X$ constă în toate combinațiile liniare finite ale elementelor din $X$.
+   - Chiar dacă $X$ este infinită, fiecare combinație liniară implică doar un număr finit de vectori nenuli din $X$.
+   - Coeficienții $\alpha_i$ aparțin corpului $\mathbb{K}$, iar $n$ este un număr natural nenul care indică numărul de termeni din combinația liniară.
+
+**Observații:**
+
+- **Subspațiul generat ca cel mai mic subspațiu care conține $X$**:
+
+  $\text{sg}(X)$ este cel mai mic subspațiu vectorial al lui $V$ care conține $X$. Orice alt subspațiu care conține $X$ trebuie să conțină și toate combinațiile liniare ale elementelor din $X$.
+
+- **Cazuri Particulare**:
+
+  - Dacă $X$ este un set finit $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_k\}$, atunci formula se reduce la:
+
+    $$
+    \text{sg}(X) = \left\{ \sum_{i=1}^k \alpha_i \mathbf{v}_i \mid \alpha_i \in \mathbb{K} \right\}.
+    $$
+
+  - Dacă $X$ este un set infinit, combinațiile liniare implică doar un număr finit de vectori nenuli, deoarece doar sumele finite sunt definite în contextul combinațiilor liniare.
+
+**Exemplu cu Set Infinit:**
+
+Fie $V$ spațiul vectorial al polinoamelor cu coeficienți reali, $\mathbb{P}$. Fie $X = \{ x^n \mid n \in \mathbb{N} \}$.
+
+## Suma Subspațiilor Vectoriale
+
+### Teoremă
+
+Fie $V$ un spațiu vectorial peste corpul $\mathbb{K}$ și fie $H_1, H_2, \ldots, H_n$ (unde $n \in \mathbb{N}_+$) o familie finită de subspații ale lui $V$. Atunci, mulțimea:
+
+$$
+H_1 + H_2 + \ldots + H_n = \left\{ \mathbf{x}_1 + \mathbf{x}_2 + \ldots + \mathbf{x}_n \mid \mathbf{x}_i \in H_i, \ \forall i = 1, 2, \ldots, n \right\}
+$$
+
+este un subspațiu vectorial al lui $V$, numit **suma subspațiilor** $H_1, H_2, \ldots, H_n$.
+
+### Demonstrație
+
+Pentru a demonstra că $H_1 + H_2 + \ldots + H_n$ este un subspațiu vectorial al lui $V$, trebuie să verificăm următoarele proprietăți:
+
+1. **Mulțimea nu este vidă**
+
+   Fiecare $H_i$ este un subspațiu vectorial, deci conține vectorul zero $\mathbf{0}$. Atunci:
+
+   $$
+   \mathbf{0} = \mathbf{0} + \mathbf{0} + \ldots + \mathbf{0} \in H_1 + H_2 + \ldots + H_n.
+   $$
+
+2. **Închidere la adunare**
+
+   Fie $\mathbf{u}, \mathbf{v} \in H_1 + H_2 + \ldots + H_n$, astfel încât:
+
+   $$
+   \mathbf{u} = \mathbf{u}_1 + \mathbf{u}_2 + \ldots + \mathbf{u}_n, \quad \mathbf{u}_i \in H_i \\
+   \mathbf{v} = \mathbf{v}_1 + \mathbf{v}_2 + \ldots + \mathbf{v}_n, \quad \mathbf{v}_i \in H_i
+   $$
+
+   Atunci:
+
+   $$
+   \mathbf{u} + \mathbf{v} = (\mathbf{u}_1 + \mathbf{v}_1) + (\mathbf{u}_2 + \mathbf{v}_2) + \ldots + (\mathbf{u}_n + \mathbf{v}_n)
+   $$
+
+   Deoarece $\mathbf{u}_i, \mathbf{v}_i \in H_i$ și $H_i$ este un subspațiu, rezultă că $\mathbf{u}_i + \mathbf{v}_i \in H_i$. Prin urmare, $\mathbf{u} + \mathbf{v} \in H_1 + H_2 + \ldots + H_n$.
+
+3. **Închidere la înmulțirea cu scalari**
+
+   Fie $\mathbf{u} \in H_1 + H_2 + \ldots + H_n$ și $\alpha \in \mathbb{K}$, astfel încât:
+
+   $$
+   \mathbf{u} = \mathbf{u}_1 + \mathbf{u}_2 + \ldots + \mathbf{u}_n, \quad \mathbf{u}_i \in H_i
+   $$
+
+   Atunci:
+
+   $$
+   \alpha \mathbf{u} = \alpha (\mathbf{u}_1 + \mathbf{u}_2 + \ldots + \mathbf{u}_n) = \alpha \mathbf{u}_1 + \alpha \mathbf{u}_2 + \ldots + \alpha \mathbf{u}_n
+   $$
+
+   Deoarece $\mathbf{u}_i \in H_i$ și $H_i$ este un subspațiu, rezultă că $\alpha \mathbf{u}_i \in H_i$. Prin urmare, $\alpha \mathbf{u} \in H_1 + H_2 + \ldots + H_n$.
+
+Prin urmare, $H_1 + H_2 + \ldots + H_n$ este un subspațiu vectorial al lui $V$.
+
+### Exemple
+
+1. **Suma a două drepte în $\mathbb{R}^2$**
+
+   Fie $H_1$ și $H_2$ două drepte prin origine în $\mathbb{R}^2$. Dacă $H_1$ și $H_2$ sunt coincidente, atunci $H_1 + H_2 = H_1$. Dacă sunt distincte și nu coliniare, atunci $H_1 + H_2 = \mathbb{R}^2$.
+
+2. **Suma a două plane în $\mathbb{R}^3$**
+
+   Fie $H_1$ și $H_2$ două plane prin origine în $\mathbb{R}^3$. Dacă planele sunt identice, atunci $H_1 + H_2 = H_1$. Dacă planele se intersectează doar în origine, atunci $H_1 + H_2 = \mathbb{R}^3$.
+
+### Observații
+
+- **Proprietatea Comutativă și Asociativă**
+
+  Suma subspațiilor este comutativă și asociativă:
+
+  $$
+  H_1 + H_2 = H_2 + H_1 \\
+  (H_1 + H_2) + H_3 = H_1 + (H_2 + H_3)
+  $$
+
+- **Relația cu Subspațiul Generat**
+
+  Suma subspațiilor $H_1, H_2, \ldots, H_n$ este egală cu subspațiul generat de reuniunea lor:
+
+  $$
+  H_1 + H_2 + \ldots + H_n = \text{sg}(H_1 \cup H_2 \cup \ldots \cup H_n)
+  $$
+
+  Unde $\text{sg}$ denotă subspațiul generat (anvelopa liniară).
 
 ## Bază și Dimensiune
 
@@ -103,10 +295,10 @@ $$
 Un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din $V$ este o **bază** a spațiului vectorial $V$ dacă:
 
 1. Vectorii sunt **liniar independenți**.
-2. Span-ul vectorilor este întregul spațiu $V$:
+2. Spațiul generat al vectorilor este întregul spațiu $V$:
 
    $$
-   V = \text{Span}\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}.
+   V = \text{sg}(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n).
    $$
 
 ### Definiție: Dimensiune
