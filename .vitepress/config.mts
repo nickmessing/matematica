@@ -34,6 +34,10 @@ export default defineConfig({
                   text: 'Spațiul Vectorial ℝⁿ',
                   link: '/algebra/spatii-vectoriale/real-n',
                 },
+                {
+                  text: 'Operații și Proprietăți în Spații Vectoriale',
+                  link: '/algebra/spatii-vectoriale/operatii',
+                },
               ],
             },
           ],
