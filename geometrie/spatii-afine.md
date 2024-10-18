@@ -41,10 +41,6 @@ unde $\alpha_1, \alpha_2, \ldots, \alpha_n \in \mathbb{K}$ sunt scalari.
 - Setul tuturor combinațiilor liniare ale unui set de vectori formează un **subspațiu vectorial** al lui $V$.
 - Dacă un vector poate fi exprimat ca o combinație liniară a altor vectori, atunci el aparține subspațiului generat de acei vectori.
 
-### Notă
-
-Pentru mai multe detalii despre [subspațiile vectoriale](/algebra/spatii-vectoriale/operatii.md#subspațiul-generat-anvelopa-liniară-a-unui-set-de-vectori), consultați secțiunea dedicată.
-
 ## Dependență și Independență Liniară
 
 ### Definiție
@@ -156,10 +152,6 @@ Un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din $V$
 - Toate bazele unui spațiu vectorial au același număr de elemente.
 - Dacă $V$ are dimensiune finită, atunci orice set de vectori liniar independenți poate fi extins la o bază a lui $V$.
 
-Pentru detalii suplimentare, consultați [Subspații, Baze și Dimensiune](/algebra/subspatii-baze-si-dimensiune.md).
-
 ## Concluzie
 
 Înțelegerea operațiilor și proprietăților spațiilor vectoriale este esențială pentru studiul algebrei liniare și al matematicii superioare. Combinațiile liniare, dependența și independența liniară, bazele și dimensiunea sunt concepte fundamentale care permit analiza și înțelegerea profundă a structurilor liniare.
-
-Pentru a aprofunda aceste concepte, vă recomandăm să explorați și [Aplicațiile Liniare și Matrice](/algebra/aplicatii-liniare-si-matrice.md).

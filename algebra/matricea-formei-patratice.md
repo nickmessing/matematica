@@ -170,7 +170,7 @@ Scopul diagonalizării este de a găsi o bază în care matricea formei pătrati
 
 #### Metodă
 
-- **Calcularea [valorilor proprii](/algebra/valori-proprii-si-vectori-proprii.md) și a vectorilor proprii** ai matricei $A$.
+- **Calcularea valorilor proprii și a vectorilor proprii** ai matricei $A$.
 - Construirea matricei $P$ având vectorii proprii ca coloane.
 - Forma pătratică devine:
 
@@ -178,7 +178,7 @@ Scopul diagonalizării este de a găsi o bază în care matricea formei pătrati
   Q(\mathbf{x}) = (\mathbf{x}')^\top D \mathbf{x}',
   $$
 
-  unde $D$ este [matricea diagonală](/algebra/diagonalizarea-matricelor.md#matrice-diagonala) conținând valorile proprii ale lui $A$.
+  unde $D$ este matricea diagonală conținând valorile proprii ale lui $A$.
 
 ## Forma Canonică a unei Forme Pătratice
 
@@ -188,11 +188,11 @@ $$
 Q(\mathbf{x}) = \lambda_1 {x'_1}^2 + \lambda_2 {x'_2}^2 + \ldots + \lambda_n {x'_n}^2,
 $$
 
-unde $\mathbf{x}' = P^{-1} \mathbf{x}$ și $\lambda_i$ sunt [valorile proprii](/algebra/valori-proprii-si-vectori-proprii.md#valori-proprii) ale matricei $A$.
+unde $\mathbf{x}' = P^{-1} \mathbf{x}$ și $\lambda_i$ sunt valorile proprii ale matricei $A$.
 
 ## Concluzie
 
-Reprezentarea formelor pătratice prin matrice simetrice și înțelegerea modului în care acestea se transformă la schimbarea bazei sunt esențiale pentru studiul aprofundat al algebrei liniare. Diagonalizarea formelor pătratice facilitează analiza acestora și are aplicații în diverse domenii ale matematicii și fizicii, precum [analiza numerica](/algebra/analiza-numerica.md) și [mecanica cuantică](https://ro.wikipedia.org/wiki/Mecanic%C4%83_cuantic%C4%83).
+Reprezentarea formelor pătratice prin matrice simetrice și înțelegerea modului în care acestea se transformă la schimbarea bazei sunt esențiale pentru studiul aprofundat al algebrei liniare. Diagonalizarea formelor pătratice facilitează analiza acestora și are aplicații în diverse domenii ale matematicii și fizicii, precum analiza numerica și [mecanica cuantică](https://ro.wikipedia.org/wiki/Mecanic%C4%83_cuantic%C4%83).
 
 ## Legături Externe
 

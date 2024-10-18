@@ -156,8 +156,6 @@ Un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din $V$
 - Toate bazele unui spațiu vectorial au același număr de elemente.
 - Dacă $V$ are dimensiune finită, atunci orice set de vectori liniar independenți poate fi extins la o bază a lui $V$.
 
-Pentru detalii suplimentare, consultați [Subspații, Baze și Dimensiune](/algebra/subspatii-baze-si-dimensiune.md).
-
 ## Schimbarea Bazei și Matricea de Trecere
 
 ### Introducere
@@ -559,5 +557,3 @@ Sistemele de ecuații liniare pot fi reprezentate în formă matricială $A \cdo
 ## Concluzie
 
 Înțelegerea operațiilor și proprietăților spațiilor vectoriale este esențială pentru studiul algebrei liniare și al matematicii superioare. Combinațiile liniare, dependența și independența liniară, bazele și dimensiunea sunt concepte fundamentale care permit analiza și înțelegerea profundă a structurilor liniare.
-
-Pentru a aprofunda aceste concepte, vă recomandăm să explorați și [Aplicațiile Liniare și Matrice](/algebra/aplicatii-liniare-si-matrice.md).

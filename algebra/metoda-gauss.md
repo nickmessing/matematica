@@ -2,7 +2,7 @@
 
 ## Introducere
 
-**Metoda Gauss**, sau **eliminarea Gauss**, este o tehnică algoritmică folosită pentru a rezolva [sisteme de ecuații liniare](/algebra/operatii-si-proprietati-in-spatii-vectoriale#sisteme-de-ecuații-liniare), a calcula [rangul unei matrice](/algebra/operatii-si-proprietati-in-spatii-vectoriale#rangul-unei-matrice-și-dependența-liniară) și a determina inversa unei matrice (dacă există). Această metodă transformă sistemul de ecuații într-unul echivalent, dar mai simplu de rezolvat, prin aducerea matricei asociate într-o **formă treaptă** sau **formă treaptă redusă** (forma esalonată).
+**Metoda Gauss**, sau **eliminarea Gauss**, este o tehnică algoritmică folosită pentru a rezolva [sisteme de ecuații liniare](/algebra/spatii-vectoriale/operatii.md#sisteme-de-ecuații-liniare), a calcula [rangul unei matrice](/algebra/spatii-vectoriale/operatii.md#rangul-unei-matrice-și-dependența-liniară) și a determina inversa unei matrice (dacă există). Această metodă transformă sistemul de ecuații într-unul echivalent, dar mai simplu de rezolvat, prin aducerea matricei asociate într-o **formă treaptă** sau **formă treaptă redusă** (forma esalonată).
 
 ## Pașii Metodei Gauss
 
@@ -116,7 +116,7 @@ $$
 
 ## Aplicații ale Metodei Gauss
 
-- **Determinarea Rangului unei Matrice**: Prin aducerea matricei la forma treaptă, numărul de pivoturi nenule indică [rangul matricei](/algebra/operatii-si-proprietati-in-spatii-vectoriale#rangul-unei-matrice-și-dependența-liniară).
+- **Determinarea Rangului unei Matrice**: Prin aducerea matricei la forma treaptă, numărul de pivoturi nenule indică [rangul matricei](/algebra/spatii-vectoriale/operatii.md#rangul-unei-matrice-și-dependența-liniară).
 
 - **Calculul Inversei unei Matrice**: Se aplică metoda Gauss-Jordan pe matricea augmentată cu matricea identitate.
 
