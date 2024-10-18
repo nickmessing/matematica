@@ -41,6 +41,10 @@ unde $\alpha_1, \alpha_2, \ldots, \alpha_n \in \mathbb{K}$ sunt scalari.
 - Setul tuturor combinațiilor liniare ale unui set de vectori formează un **subspațiu vectorial** al lui $V$.
 - Dacă un vector poate fi exprimat ca o combinație liniară a altor vectori, atunci el aparține subspațiului generat de acei vectori.
 
+### Notă
+
+Pentru mai multe detalii despre [subspațiile vectoriale](/algebra/spatii-vectoriale/operatii.md#subspațiul-generat-anvelopa-liniară-a-unui-set-de-vectori), consultați secțiunea dedicată.
+
 ## Dependență și Independență Liniară
 
 ### Definiție
@@ -83,16 +87,7 @@ Un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din $V$
 
 ### Metoda Determinării Dependenței Liniare prin Rangul Matricei
 
-#### Definiție
-
-Pentru un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din spațiul vectorial $V$, putem forma matricea $A$ având vectorii ca coloane (sau linii). **Rangul** matricei $A$ este egal cu numărul maxim de vectori liniar independenți dintre $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n$.
-
-#### Criteriu
-
-- **Dacă rangul matricei $A$ este egal cu numărul de vectori $n$, atunci vectorii sunt liniar independenți.**
-- **Dacă rangul matricei $A$ este mai mic decât $n$, atunci vectorii sunt liniar dependenți.**
-
-[Vezi secțiunea **Rangul unei Matrice și Dependența Liniară**](/algebra/operatii-si-proprietati-in-spatii-vectoriale#rangul-unei-matrice-și-dependența-liniară)
+Pentru a determina dependența liniară a vectorilor, se poate utiliza [metoda Gauss de eliminare](/algebra/metoda-gauss.md) pentru a calcula rangul matricei formate din vectori. Dacă rangul este mai mic decât numărul de vectori, aceștia sunt liniar dependenți.
 
 ## Subspațiul Generat (Anvelopa Liniară) a unui Set de Vectori
 
@@ -134,159 +129,10 @@ Acest subspațiu este cel mai mic subspațiu vectorial al lui $V$ care conține 
 
    care este o dreaptă prin origine în $\mathbb{R}^2$.
 
-3. **Funcții în Spațiul $C[0,1]$**
-
-   Fie $f_1(x) = \sin x$ și $f_2(x) = \cos x$. Atunci, subspațiul generat de aceste funcții este:
-
-   $$
-   \text{sg}(f_1, f_2) = \left\{ f \mid f(x) = \alpha \sin x + \beta \cos x, \ \alpha, \beta \in \mathbb{R} \right\}.
-   $$
-
 ### Observații
 
 - Dacă $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n) = V$, atunci se spune că vectorii $\mathbf{v}_1, \ldots, \mathbf{v}_n$ **generează** spațiul $V$.
 - În cazul în care setul de vectori este liniar dependent, subspațiul generat poate fi de dimensiune mai mică decât numărul vectorilor.
-
-### Relația cu Baza Spațiului Vectorial
-
-O **bază** a spațiului vectorial $V$ este un set de vectori liniar independenți care generează $V$. Cu alte cuvinte, dacă vectorii $\mathbf{v}_1, \ldots, \mathbf{v}_n$ sunt liniar independenți și $\text{sg}(\mathbf{v}_1, \ldots, \mathbf{v}_n) = V$, atunci $\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$ este o bază a lui $V$.
-
-### Teorema Subspațiului Generat de o Submulțime a Spațiului Vectorial
-
-Fie $V$ un spațiu vectorial peste corpul $\mathbb{K}$ și $X \subseteq V$ o submulțime (posibil infinită) a lui $V$. Atunci:
-
-1. **Dacă $X$ este mulțimea vidă sau $\{ \mathbf{0} \}$**:
-
-   $$
-   \text{sg}(X) = \{ \mathbf{0} \}.
-   $$
-
-   **Explicație:**
-
-   - Mulțimea vidă nu conține niciun vector, deci singura combinație liniară posibilă este vectorul zero.
-   - Dacă $X = \{ \mathbf{0} \}$, orice combinație liniară a vectorului zero este tot vectorul zero, deoarece $\alpha \mathbf{0} = \mathbf{0}$ pentru orice scalar $\alpha$.
-
-2. **Dacă $X$ nu este mulțimea vidă și nu conține doar vectorul zero**:
-
-   $$
-   \text{sg}(X) = \left\{ \sum_{i=1}^n \alpha_i \mathbf{x}_i \mid \mathbf{x}_i \in X, \ \alpha_i \in \mathbb{K}, \ n \in \mathbb{N}_+ \right\}.
-   $$
-
-   **Explicație:**
-
-   - Subspațiul generat de $X$ constă în toate combinațiile liniare finite ale elementelor din $X$.
-   - Chiar dacă $X$ este infinită, fiecare combinație liniară implică doar un număr finit de vectori nenuli din $X$.
-   - Coeficienții $\alpha_i$ aparțin corpului $\mathbb{K}$, iar $n$ este un număr natural nenul care indică numărul de termeni din combinația liniară.
-
-**Observații:**
-
-- **Subspațiul generat ca cel mai mic subspațiu care conține $X$**:
-
-  $\text{sg}(X)$ este cel mai mic subspațiu vectorial al lui $V$ care conține $X$. Orice alt subspațiu care conține $X$ trebuie să conțină și toate combinațiile liniare ale elementelor din $X$.
-
-- **Cazuri Particulare**:
-
-  - Dacă $X$ este un set finit $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_k\}$, atunci formula se reduce la:
-
-    $$
-    \text{sg}(X) = \left\{ \sum_{i=1}^k \alpha_i \mathbf{v}_i \mid \alpha_i \in \mathbb{K} \right\}.
-    $$
-
-  - Dacă $X$ este un set infinit, combinațiile liniare implică doar un număr finit de vectori nenuli, deoarece doar sumele finite sunt definite în contextul combinațiilor liniare.
-
-**Exemplu cu Set Infinit:**
-
-Fie $V$ spațiul vectorial al polinoamelor cu coeficienți reali, $\mathbb{P}$. Fie $X = \{ x^n \mid n \in \mathbb{N} \}$.
-
-## Suma Subspațiilor Vectoriale
-
-### Teoremă
-
-Fie $V$ un spațiu vectorial peste corpul $\mathbb{K}$ și fie $H_1, H_2, \ldots, H_n$ (unde $n \in \mathbb{N}_+$) o familie finită de subspații ale lui $V$. Atunci, mulțimea:
-
-$$
-H_1 + H_2 + \ldots + H_n = \left\{ \mathbf{x}_1 + \mathbf{x}_2 + \ldots + \mathbf{x}_n \mid \mathbf{x}_i \in H_i, \ \forall i = 1, 2, \ldots, n \right\}
-$$
-
-este un subspațiu vectorial al lui $V$, numit **suma subspațiilor** $H_1, H_2, \ldots, H_n$.
-
-### Demonstrație
-
-Pentru a demonstra că $H_1 + H_2 + \ldots + H_n$ este un subspațiu vectorial al lui $V$, trebuie să verificăm următoarele proprietăți:
-
-1. **Mulțimea nu este vidă**
-
-   Fiecare $H_i$ este un subspațiu vectorial, deci conține vectorul zero $\mathbf{0}$. Atunci:
-
-   $$
-   \mathbf{0} = \mathbf{0} + \mathbf{0} + \ldots + \mathbf{0} \in H_1 + H_2 + \ldots + H_n.
-   $$
-
-2. **Închidere la adunare**
-
-   Fie $\mathbf{u}, \mathbf{v} \in H_1 + H_2 + \ldots + H_n$, astfel încât:
-
-   $$
-   \mathbf{u} = \mathbf{u}_1 + \mathbf{u}_2 + \ldots + \mathbf{u}_n, \quad \mathbf{u}_i \in H_i \\
-   \mathbf{v} = \mathbf{v}_1 + \mathbf{v}_2 + \ldots + \mathbf{v}_n, \quad \mathbf{v}_i \in H_i
-   $$
-
-   Atunci:
-
-   $$
-   \mathbf{u} + \mathbf{v} = (\mathbf{u}_1 + \mathbf{v}_1) + (\mathbf{u}_2 + \mathbf{v}_2) + \ldots + (\mathbf{u}_n + \mathbf{v}_n)
-   $$
-
-   Deoarece $\mathbf{u}_i, \mathbf{v}_i \in H_i$ și $H_i$ este un subspațiu, rezultă că $\mathbf{u}_i + \mathbf{v}_i \in H_i$. Prin urmare, $\mathbf{u} + \mathbf{v} \in H_1 + H_2 + \ldots + H_n$.
-
-3. **Închidere la înmulțirea cu scalari**
-
-   Fie $\mathbf{u} \in H_1 + H_2 + \ldots + H_n$ și $\alpha \in \mathbb{K}$, astfel încât:
-
-   $$
-   \mathbf{u} = \mathbf{u}_1 + \mathbf{u}_2 + \ldots + \mathbf{u}_n, \quad \mathbf{u}_i \in H_i
-   $$
-
-   Atunci:
-
-   $$
-   \alpha \mathbf{u} = \alpha (\mathbf{u}_1 + \mathbf{u}_2 + \ldots + \mathbf{u}_n) = \alpha \mathbf{u}_1 + \alpha \mathbf{u}_2 + \ldots + \alpha \mathbf{u}_n
-   $$
-
-   Deoarece $\mathbf{u}_i \in H_i$ și $H_i$ este un subspațiu, rezultă că $\alpha \mathbf{u}_i \in H_i$. Prin urmare, $\alpha \mathbf{u} \in H_1 + H_2 + \ldots + H_n$.
-
-Prin urmare, $H_1 + H_2 + \ldots + H_n$ este un subspațiu vectorial al lui $V$.
-
-### Exemple
-
-1. **Suma a două drepte în $\mathbb{R}^2$**
-
-   Fie $H_1$ și $H_2$ două drepte prin origine în $\mathbb{R}^2$. Dacă $H_1$ și $H_2$ sunt coincidente, atunci $H_1 + H_2 = H_1$. Dacă sunt distincte și nu coliniare, atunci $H_1 + H_2 = \mathbb{R}^2$.
-
-2. **Suma a două plane în $\mathbb{R}^3$**
-
-   Fie $H_1$ și $H_2$ două plane prin origine în $\mathbb{R}^3$. Dacă planele sunt identice, atunci $H_1 + H_2 = H_1$. Dacă planele se intersectează doar în origine, atunci $H_1 + H_2 = \mathbb{R}^3$.
-
-### Observații
-
-- **Proprietatea Comutativă și Asociativă**
-
-  Suma subspațiilor este comutativă și asociativă:
-
-  $$
-  H_1 + H_2 = H_2 + H_1 \\
-  (H_1 + H_2) + H_3 = H_1 + (H_2 + H_3)
-  $$
-
-- **Relația cu Subspațiul Generat**
-
-  Suma subspațiilor $H_1, H_2, \ldots, H_n$ este egală cu subspațiul generat de reuniunea lor:
-
-  $$
-  H_1 + H_2 + \ldots + H_n = \text{sg}(H_1 \cup H_2 \cup \ldots \cup H_n)
-  $$
-
-  Unde $\text{sg}$ denotă subspațiul generat (anvelopa liniară).
 
 ## Bază și Dimensiune
 
@@ -310,71 +156,408 @@ Un set de vectori $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ din $V$
 - Toate bazele unui spațiu vectorial au același număr de elemente.
 - Dacă $V$ are dimensiune finită, atunci orice set de vectori liniar independenți poate fi extins la o bază a lui $V$.
 
+Pentru detalii suplimentare, consultați [Subspații, Baze și Dimensiune](/algebra/subspatii-baze-si-dimensiune.md).
+
+## Schimbarea Bazei și Matricea de Trecere
+
+### Introducere
+
+În studiul spațiilor vectoriale, **alegerea bazei** este esențială pentru reprezentarea vectorilor și efectuarea calculelor. Uneori, este necesar să schimbăm baza pentru a simplifica o problemă sau pentru a obține o perspectivă diferită. **Schimbarea bazei** presupune trecerea de la o bază la alta, iar **matricea de trecere** este instrumentul matematic care facilitează această tranziție.
+
+### Coordonatele unui Vector în Diferite Baze
+
+Fie $V$ un spațiu vectorial de dimensiune finită peste un corp $\mathbb{K}$, și fie:
+
+- $B = \{\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n\}$ o bază a lui $V$.
+- $B' = \{\mathbf{e}'_1, \mathbf{e}'_2, \ldots, \mathbf{e}'_n\}$ o altă bază a lui $V$.
+
+Pentru orice vector $\mathbf{v} \in V$, putem scrie:
+
+1. În baza $B$:
+
+   $$
+   \mathbf{v} = x_1 \mathbf{e}_1 + x_2 \mathbf{e}_2 + \ldots + x_n \mathbf{e}_n,
+   $$
+
+   unde $[ \mathbf{v} ]_B = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$ sunt coordonatele lui $\mathbf{v}$ în baza $B$.
+
+2. În baza $B'$:
+   $$
+   \mathbf{v} = x'_1 \mathbf{e}'_1 + x'_2 \mathbf{e}'_2 + \ldots + x'_n \mathbf{e}'_n,
+   $$
+   unde $[ \mathbf{v} ]_{B'} = \begin{pmatrix} x'_1 \\ x'_2 \\ \vdots \\ x'_n \end{pmatrix}$ sunt coordonatele lui $\mathbf{v}$ în baza $B'$.
+
+### Matricea de Trecere
+
+**Matricea de trecere** de la baza $B$ la baza $B'$, notată $P_{B \to B'}$, este matricea care transformă coordonatele unui vector din baza $B$ în coordonatele sale în baza $B'$.
+
+Definiția matricei de trecere:
+
+$$
+P_{B \to B'} = \begin{pmatrix} [ \mathbf{e}_1 ]_{B'} & [ \mathbf{e}_2 ]_{B'} & \ldots & [ \mathbf{e}_n ]_{B'} \end{pmatrix},
+$$
+
+unde $[ \mathbf{e}_i ]_{B'}$ reprezintă coordonatele vectorului $\mathbf{e}_i$ în baza $B'$.
+
+### Relația dintre Coordonatele Vectorilor
+
+Coordonatele vectorului $\mathbf{v}$ în cele două baze sunt legate prin matricea de trecere:
+
+$$
+[ \mathbf{v} ]_{B'} = P_{B \to B'}^\top [ \mathbf{v} ]_B,
+$$
+
+unde $P_{B \to B'}^\top$ este transpusa matricei de trecere. Notăm că în unele convenții se utilizează direct matricea de trecere fără transpusa, în funcție de cum sunt reprezentați vectorii (coloană sau linie).
+
+### Calculul Matricei de Trecere
+
+Pentru a calcula matricea de trecere $P_{B \to B'}$, exprimăm fiecare vector din baza veche $B$ în funcție de vectorii din baza nouă $B'$:
+
+$$
+\mathbf{e}_i = a_{1i} \mathbf{e}'_1 + a_{2i} \mathbf{e}'_2 + \ldots + a_{ni} \mathbf{e}'_n,
+$$
+
+pentru $i = 1, 2, \ldots, n$. Coeficienții $a_{ji}$ sunt elementele matricei de trecere $P_{B \to B'}$.
+
+Astfel, matricea de trecere este:
+
+$$
+P_{B \to B'} = \begin{pmatrix}
+a_{11} & a_{12} & \ldots & a_{1n} \\
+a_{21} & a_{22} & \ldots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \ldots & a_{nn} \\
+\end{pmatrix}.
+$$
+
+### Inversa Matricei de Trecere
+
+Matricea de trecere de la baza $B'$ la baza $B$, notată $P_{B' \to B}$, este inversa matricei $P_{B \to B'}$:
+
+$$
+P_{B' \to B} = (P_{B \to B'})^{-1}.
+$$
+
+Aceasta înseamnă că putem trece coordonatele unui vector din baza $B'$ în baza $B$ folosind:
+
+$$
+[ \mathbf{v} ]_B = P_{B' \to B}^\top [ \mathbf{v} ]_{B'}.
+$$
+
 ### Exemple
 
-1. **Baza Standard a lui $\mathbb{R}^n$**
+#### Exemplul 1: Schimbarea bazei în $\mathbb{R}^2$
 
-   Vectorii $\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n$, unde $\mathbf{e}_i$ are 1 pe poziția $i$ și 0 în rest, formează o bază a lui $\mathbb{R}^n$.
+Fie spațiul vectorial $\mathbb{R}^2$ și bazele:
 
-2. **Baza Polinoamelor**
+- Baza standard $B = \{ \mathbf{e}_1, \mathbf{e}_2 \}$, unde $\mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ și $\mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$.
 
-   În spațiul polinoamelor de grad cel mult $n$, $\mathbb{P}_n$, vectorii $1, x, x^2, \ldots, x^n$ formează o bază, iar $\dim \mathbb{P}_n = n+1$.
+- Baza $B' = \{ \mathbf{e}'_1, \mathbf{e}'_2 \}$, cu $\mathbf{e}'_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$ și $\mathbf{e}'_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix}$.
 
-## Operații Fundamentale în Spații Vectoriale
+**Pasul 1:** Exprimăm vectorii din baza veche $B$ în baza nouă $B'$.
 
-### Adunarea Vectorilor
+Să găsim coeficienții $a_{ji}$ astfel încât:
 
-Pentru $\mathbf{u}, \mathbf{v} \in V$, adunarea este definită prin:
+1. $\mathbf{e}_1 = a_{11} \mathbf{e}'_1 + a_{21} \mathbf{e}'_2$.
 
-$$
-\mathbf{u} + \mathbf{v} \in V.
-$$
+2. $\mathbf{e}_2 = a_{12} \mathbf{e}'_1 + a_{22} \mathbf{e}'_2$.
 
-**Proprietăți:**
-
-- **Comutativitate**: $\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}$.
-- **Asociativitate**: $(\mathbf{u} + \mathbf{v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v} + \mathbf{w})$.
-- **Element neutru**: Există un vector zero $\mathbf{0}$ astfel încât $\mathbf{v} + \mathbf{0} = \mathbf{v}$.
-- **Element opus**: Pentru fiecare $\mathbf{v} \in V$, există $-\mathbf{v} \in V$ astfel încât $\mathbf{v} + (-\mathbf{v}) = \mathbf{0}$.
-
-### Înmulțirea cu un Scalar
-
-Pentru $\alpha \in \mathbb{K}$ și $\mathbf{v} \in V$, operația este:
+Pentru $\mathbf{e}_1$:
 
 $$
-\alpha \mathbf{v} \in V.
+\begin{cases}
+1 = 2a_{11} - a_{21} \\
+0 = a_{11} + a_{21}
+\end{cases}
 $$
 
-**Proprietăți:**
+Rezolvăm sistemul:
 
-- **Asociativitate scalară**: $\alpha (\beta \mathbf{v}) = (\alpha \beta) \mathbf{v}$.
-- **Element neutru scalar**: $1 \mathbf{v} = \mathbf{v}$.
-- **Distributivitatea față de adunarea vectorilor**: $\alpha (\mathbf{u} + \mathbf{v}) = \alpha \mathbf{u} + \alpha \mathbf{v}$.
-- **Distributivitatea față de adunarea scalarilor**: $(\alpha + \beta) \mathbf{v} = \alpha \mathbf{v} + \beta \mathbf{v}$.
+Din a doua ecuație:
 
-## Subspații Vectoriale
+$$
+a_{21} = -a_{11}
+$$
 
-### Definiție
+Înlocuim în prima ecuație:
 
-Un **subspațiu vectorial** $W$ al spațiului vectorial $V$ este o submulțime nevidă $W \subseteq V$ care este ea însăși un spațiu vectorial față de operațiile din $V$.
+$$
+1 = 2a_{11} - (-a_{11}) \implies 1 = 2a_{11} + a_{11} \implies 1 = 3a_{11} \implies a_{11} = \dfrac{1}{3}
+$$
 
-### Criterii
+Deci $a_{21} = -\dfrac{1}{3}$.
 
-Pentru ca $W$ să fie un subspațiu vectorial al lui $V$, trebuie să satisfacă:
+Pentru $\mathbf{e}_2$:
 
-1. **Închidere la adunare**: $\forall \mathbf{u}, \mathbf{v} \in W$, atunci $\mathbf{u} + \mathbf{v} \in W$.
-2. **Închidere la înmulțirea cu scalari**: $\forall \alpha \in \mathbb{K}$ și $\forall \mathbf{v} \in W$, atunci $\alpha \mathbf{v} \in W$.
+$$
+\begin{cases}
+0 = 2a_{12} - a_{22} \\
+1 = a_{12} + a_{22}
+\end{cases}
+$$
+
+Din a doua ecuație:
+
+$$
+a_{22} = 1 - a_{12}
+$$
+
+Înlocuim în prima ecuație:
+
+$$
+0 = 2a_{12} - (1 - a_{12}) \implies 0 = 2a_{12} -1 + a_{12} \implies 0 = 3a_{12} -1 \implies a_{12} = \dfrac{1}{3}
+$$
+
+Deci $a_{22} = 1 - \dfrac{1}{3} = \dfrac{2}{3}$.
+
+**Pasul 2:** Matricea de trecere este:
+
+$$
+P_{B \to B'} = \begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22} \\
+\end{pmatrix} = \begin{pmatrix}
+\dfrac{1}{3} & \dfrac{1}{3} \\
+-\dfrac{1}{3} & \dfrac{2}{3} \\
+\end{pmatrix}
+$$
+
+**Pasul 3:** Pentru a găsi coordonatele unui vector $\mathbf{v}$ în baza $B'$, înmulțim:
+
+$$
+[ \mathbf{v} ]_{B'} = P_{B \to B'}^\top [ \mathbf{v} ]_B
+$$
+
+#### Exemplul 2: Schimbarea bazei în $\mathbb{R}^3$
+
+Fie spațiul vectorial $\mathbb{R}^3$ și bazele:
+
+- Baza standard $B = \{ \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3 \}$.
+
+- Baza $B'$ definită prin vectorii:
+
+  $$
+  \mathbf{e}'_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, \quad \mathbf{e}'_2 = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}, \quad \mathbf{e}'_3 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}
+  $$
+
+Calculul matricei de trecere se face similar, exprimând fiecare vector al bazei vechi în baza nouă.
+
+### Proprietăți ale Matricei de Trecere
+
+- **Inversabilitate**: Matricea de trecere $P_{B \to B'}$ este inversabilă, deoarece bazele $B$ și $B'$ sunt bazele aceluiași spațiu vectorial de dimensiune finită.
+
+- **Compoziția Matriceilor de Trecere**: Dacă avem trei baze $B$, $B'$, $B''$, atunci:
+
+  $$
+  P_{B \to B''} = P_{B' \to B''} P_{B \to B'}
+  $$
+
+### Schimbarea Matricei unei Aplicații Liniare
+
+Dacă $T: V \to V$ este o aplicație liniară, atunci matricea sa în baza $B$ este $[T]_B$, iar în baza $B'$ este $[T]_{B'}$.
+
+Relația dintre aceste matrici este:
+
+$$
+[T]_{B'} = P_{B \to B'}^{-1} [T]_B P_{B \to B'}
+$$
+
+Această relație este utilă pentru diagonalizarea matricelor și pentru simplificarea formelor aplicațiilor liniare.
+
+### Concluzie
+
+Schimbarea bazei și utilizarea matricei de trecere sunt instrumente esențiale în algebră liniară, permițând analiza și simplificarea problemelor prin alegerea bazelor potrivite. Înțelegerea acestor concepte facilitează studiul aplicațiilor liniare, diagonalizarea matricelor și multe alte aspecte ale matematicii avansate.
+
+---
+
+## Înmulțirea Matricelor
+
+### Introducere
+
+Înmulțirea matricelor este o operație fundamentală în algebră liniară, cu aplicații în diverse domenii precum fizica, ingineria și informatica. Această operație permite compunerea aplicațiilor liniare și rezolvarea sistemelor de ecuații liniare.
+
+### Definiția Înmulțirii Matricelor
+
+Fie două matrice $A \in \mathbb{K}^{m \times n}$ și $B \in \mathbb{K}^{n \times p}$, unde $\mathbb{K}$ este un corp (de obicei $\mathbb{R}$ sau $\mathbb{C}$). **Produsul matricial** $C = A \cdot B$ este o matrice $C \in \mathbb{K}^{m \times p}$, definită prin:
+
+$$
+C_{ij} = \sum_{k=1}^{n} A_{ik} \cdot B_{kj},
+$$
+
+pentru $i = 1, 2, \ldots, m$ și $j = 1, 2, \ldots, p$.
+
+### Proprietăți ale Înmulțirii Matricelor
+
+1. **Asociativitatea**:
+
+   $$
+   (A \cdot B) \cdot C = A \cdot (B \cdot C),
+   $$
+
+   când dimensiunile matricelor permit efectuarea înmulțirilor.
+
+2. **Distributivitatea**:
+
+   - **Față de adunare la stânga**:
+
+     $$
+     A \cdot (B + C) = A \cdot B + A \cdot C.
+     $$
+
+   - **Față de adunare la dreapta**:
+
+     $$
+     (A + B) \cdot C = A \cdot C + B \cdot C.
+     $$
+
+3. **Necomutativitatea**:
+
+   În general, $A \cdot B \ne B \cdot A$. Înmulțirea matricelor nu este comutativă.
+
+4. **Matricea Identitate**:
+
+   Există o matrice identitate $I_n \in \mathbb{K}^{n \times n}$, astfel încât pentru orice matrice $A \in \mathbb{K}^{n \times n}$:
+
+   $$
+   A \cdot I_n = I_n \cdot A = A.
+   $$
 
 ### Exemple
 
-1. **Dreapta prin Origine în $\mathbb{R}^2$**
+#### Exemplul 1: Înmulțirea a două matrice compatibile
 
-   Mulțimea $W = \{ (x, y) \in \mathbb{R}^2 \mid y = mx \}$, unde $m$ este constantă, este un subspațiu vectorial al lui $\mathbb{R}^2$.
+Fie:
 
-2. **Mulțimea Matricelor Simetrice**
+$$
+A = \begin{pmatrix}
+1 & 2 \\
+3 & 4 \\
+\end{pmatrix}, \quad
+B = \begin{pmatrix}
+5 & 6 \\
+7 & 8 \\
+\end{pmatrix}.
+$$
 
-   În spațiul tuturor matricelor pătratice de ordin $n$, mulțimea matricelor simetrice este un subspațiu vectorial.
+Calculăm $C = A \cdot B$:
+
+$$
+C_{11} = 1 \cdot 5 + 2 \cdot 7 = 5 + 14 = 19, \quad
+C_{12} = 1 \cdot 6 + 2 \cdot 8 = 6 + 16 = 22, \\
+C_{21} = 3 \cdot 5 + 4 \cdot 7 = 15 + 28 = 43, \quad
+C_{22} = 3 \cdot 6 + 4 \cdot 8 = 18 + 32 = 50.
+$$
+
+Deci:
+
+$$
+C = A \cdot B = \begin{pmatrix}
+19 & 22 \\
+43 & 50 \\
+\end{pmatrix}.
+$$
+
+#### Exemplul 2: Înmulțirea unei matrici $3 \times 2$ cu o matrice $2 \times 3$
+
+Fie:
+
+$$
+A = \begin{pmatrix}
+1 & 4 \\
+2 & 5 \\
+3 & 6 \\
+\end{pmatrix}, \quad
+B = \begin{pmatrix}
+7 & 8 & 9 \\
+10 & 11 & 12 \\
+\end{pmatrix}.
+$$
+
+Calculăm $C = A \cdot B$, unde $C$ va fi o matrice $3 \times 3$.
+
+Calculăm elementele lui $C$:
+
+- $C_{11} = 1 \cdot 7 + 4 \cdot 10 = 7 + 40 = 47$
+- $C_{12} = 1 \cdot 8 + 4 \cdot 11 = 8 + 44 = 52$
+- $C_{13} = 1 \cdot 9 + 4 \cdot 12 = 9 + 48 = 57$
+
+- $C_{21} = 2 \cdot 7 + 5 \cdot 10 = 14 + 50 = 64$
+- $C_{22} = 2 \cdot 8 + 5 \cdot 11 = 16 + 55 = 71$
+- $C_{23} = 2 \cdot 9 + 5 \cdot 12 = 18 + 60 = 78$
+
+- $C_{31} = 3 \cdot 7 + 6 \cdot 10 = 21 + 60 = 81$
+- $C_{32} = 3 \cdot 8 + 6 \cdot 11 = 24 + 66 = 90$
+- $C_{33} = 3 \cdot 9 + 6 \cdot 12 = 27 + 72 = 99$
+
+Astfel:
+
+$$
+C = A \cdot B = \begin{pmatrix}
+47 & 52 & 57 \\
+64 & 71 & 78 \\
+81 & 90 & 99 \\
+\end{pmatrix}.
+$$
+
+### Interpretarea Înmulțirii Matricelor
+
+Înmulțirea matricelor poate fi interpretată în termeni de compunere de aplicații liniare. Dacă $A$ reprezintă matricea unei aplicații liniare $f: \mathbb{K}^n \to \mathbb{K}^m$, iar $B$ reprezintă matricea unei aplicații liniare $g: \mathbb{K}^p \to \mathbb{K}^n$, atunci produsul $A \cdot B$ reprezintă matricea compunerii $f \circ g: \mathbb{K}^p \to \mathbb{K}^m$.
+
+### Proprietăți Suplimentare
+
+- **Transpusa unui produs**:
+
+  $$
+  (A \cdot B)^\top = B^\top \cdot A^\top.
+  $$
+
+- **Determinantul unui produs de matrici pătratice**:
+
+  Dacă $A$ și $B$ sunt matrici $n \times n$, atunci:
+
+  $$
+  \det(A \cdot B) = \det(A) \cdot \det(B).
+  $$
+
+- **Inversa unui produs de matrici inversabile**:
+
+  Dacă $A$ și $B$ sunt matrici pătratice inversabile, atunci:
+
+  $$
+  (A \cdot B)^{-1} = B^{-1} \cdot A^{-1}.
+  $$
+
+### Cazuri Particulare
+
+- **Înmulțirea cu un scalar**:
+
+  Dacă $k \in \mathbb{K}$ și $A$ este o matrice, atunci $kA$ este matricea obținută prin înmulțirea fiecărui element al lui $A$ cu scalarul $k$.
+
+- **Înmulțirea element cu element (Hadamard)**:
+
+  Aceasta nu este aceeași cu înmulțirea matricială standard. Pentru matrici de aceeași dimensiune, produsul Hadamard $A \circ B$ este matricea obținută prin înmulțirea element cu element:
+
+  $$
+  (A \circ B)_{ij} = A_{ij} \cdot B_{ij}.
+  $$
+
+### Avertismente
+
+- Înmulțirea matricelor nu este comutativă în general. Adică, chiar dacă $A \cdot B$ și $B \cdot A$ sunt definite, în general $A \cdot B \ne B \cdot A$.
+- Pentru ca produsul $A \cdot B$ să fie definit, numărul de coloane al lui $A$ trebuie să fie egal cu numărul de linii al lui $B$.
+
+### Aplicarea Înmulțirii Matricelor în Sisteme de Ecuații Liniare
+
+Sistemele de ecuații liniare pot fi reprezentate în formă matricială $A \cdot \mathbf{x} = \mathbf{b}$, unde $A$ este matricea coeficienților, $\mathbf{x}$ este vectorul necunoscutelor, iar $\mathbf{b}$ este vectorul termenilor liberi. Înmulțirea matricelor permite utilizarea algoritmilor și a metodelor numerice pentru rezolvarea acestor sisteme.
+
+### Concluzie
+
+Înmulțirea matricelor este o operație esențială în algebră liniară, cu implicații profunde în matematică și aplicațiile sale. Înțelegerea proprietăților și a modului de calcul al produsului matricial este fundamentală pentru studiul subiectelor avansate precum diagonalizarea matricelor, transformări liniare și analiza numerică.
+
+---
 
 ## Concluzie
 
 Înțelegerea operațiilor și proprietăților spațiilor vectoriale este esențială pentru studiul algebrei liniare și al matematicii superioare. Combinațiile liniare, dependența și independența liniară, bazele și dimensiunea sunt concepte fundamentale care permit analiza și înțelegerea profundă a structurilor liniare.
+
+Pentru a aprofunda aceste concepte, vă recomandăm să explorați și [Aplicațiile Liniare și Matrice](/algebra/aplicatii-liniare-si-matrice.md).

@@ -6,7 +6,7 @@ Această pagină explică notațiile, simbolurile și semnele matematice utiliza
 
 #### **$\mathbb{R}$** {#multimea-numerelor-reale}
 
-Mulțimea numerelor reale.
+Mulțimea numerelor reale. Pentru detalii, vedeți [Numere Reale și Mulțimi de Numere](/teorie/numere-reale.md).
 
 #### **$\mathbb{C}$** {#multimea-numerelor-complexe}
 
@@ -22,7 +22,17 @@ Mulțimea numerelor naturale strict pozitive.
 
 #### **$n$** {#numar-natural}
 
-Un număr natural, de obicei reprezentând dimensiunea unui [spațiu vectorial](#spatiu-vectorial) sau numărul de variabile.
+Un număr natural, de obicei reprezentând dimensiunea unui [spațiu vectorial](/algebra/spatii-vectoriale/).
+
+## Alte Simboluri și Notații
+
+#### **$\forall$** {#pentru-orice}
+
+Simbolul "pentru orice". Pentru mai multe despre [cuantificatori](/teorie/logica-matematica#cuantificatori), consultați secțiunea dedicată.
+
+#### **$\exists$** {#exista}
+
+Simbolul "există".
 
 ## Spații Vectoriale Specifice
 
@@ -369,14 +379,6 @@ Simbolurile "mai mic sau egal cu" și "mai mare sau egal cu".
 #### **$<$, $>$** {#comparatie}
 
 Simbolurile "mai mic decât" și "mai mare decât".
-
-#### **$\forall$** {#pentru-orice}
-
-Simbolul "pentru orice".
-
-#### **$\exists$** {#exista}
-
-Simbolul "există".
 
 #### **$\in$** {#apartine}
 

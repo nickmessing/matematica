@@ -2,17 +2,17 @@
 
 ## Introducere
 
-[**Formele pătratice**](/symbols#forma-patratica) sunt funcții algebrice care asociază un număr real fiecărui vector dintr-un [spațiu vectorial](/symbols#spatiu-vectorial), fiind polinoame omogene de gradul doi. Studiul formelor pătratice este esențial în algebră liniară și are aplicații în diverse domenii precum geometria, analiza numerică și fizica teoretică. În această lecție, vom explora modul în care o formă pătratică poate fi reprezentată prin intermediul unei matrice simetrice și cum se schimbă această reprezentare la schimbarea bazei.
+[**Formele pătratice**](/algebra/matricea-formei-patratice#definitia-formei-patratice) sunt funcții algebrice care asociază un număr real fiecărui vector dintr-un [spațiu vectorial](/algebra/spatii-vectoriale/). Studiul formelor pătratice este esențial în algebră liniară și are aplicații în diverse domenii precum geometria, analiza numerică și fizica teoretică. În această lecție, vom explora modul în care o formă pătratică poate fi reprezentată prin intermediul unei matrice simetrice și cum se schimbă această reprezentare la schimbarea bazei.
 
 ## Definiția Formei Pătratice
 
-Fie $V$ un [spațiu vectorial](/symbols#spatiu-vectorial) de dimensiune finită peste corpul $\mathbb{R}$ sau $\mathbb{C}$. O **formă pătratică** pe $V$ este o funcție $Q: V \to \mathbb{R}$ (sau $\mathbb{C}$) astfel încât pentru orice vector $\mathbf{x} \in V$:
+Fie $V$ un [spațiu vectorial](/algebra/spatii-vectoriale/) de dimensiune finită peste corpul $\mathbb{R}$ sau $\mathbb{C}$. O **formă pătratică** pe $V$ este o funcție $Q: V \to \mathbb{R}$ definită prin:
 
 $$
 Q(\mathbf{x}) = B(\mathbf{x}, \mathbf{x}),
 $$
 
-unde $B$ este o [formă biliniară simetrică](/symbols#forma-bilinara) asociată.
+unde $B$ este o [formă biliniară simetrică](/algebra/spatii-vectoriale/operatii.md#forma-bilinara) asociată.
 
 ### Proprietăți ale Formelor Pătratice
 
@@ -32,7 +32,7 @@ unde $B$ este o [formă biliniară simetrică](/symbols#forma-bilinara) asociat�
 
 ### Definiție
 
-Fie $V$ un [spațiu vectorial](/symbols#spatiu-vectorial) de dimensiune $n$, și fie $Q: V \to \mathbb{R}$ o formă pătratică. Alegând o [bază ordonată](/symbols#baza-ordonata) $(\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n)$ a spațiului $V$, forma pătratică $Q$ poate fi reprezentată printr-o **matrice simetrică** $A \in \mathbb{R}^{n \times n}$ astfel încât pentru orice vector $\mathbf{x} \in V$ cu coordonatele $(x_1, x_2, \ldots, x_n)$, avem:
+Fie $V$ un [spațiu vectorial](/algebra/spatii-vectoriale/) de dimensiune $n$, și fie $Q: V \to \mathbb{R}$ o formă pătratică. Alegând o [bază ordonată](/algebra/spatii-vectoriale/operatii.md#baza) $(\mathbf{e}_1, \mathbf{e}_2, \ldots, \mathbf{e}_n)$ a spațiului $V$, forma pătratică $Q$ poate fi reprezentată prin intermediul unei **matrice simetrice** $A \in \mathbb{R}^{n \times n}$ astfel încât pentru orice vector $\mathbf{x} \in V$ cu coordonatele $(x_1, x_2, \ldots, x_n)$, avem:
 
 $$
 Q(\mathbf{x}) = \mathbf{x}^\top A \mathbf{x},
@@ -161,18 +161,8 @@ unde:
 
 - $A$ este matricea formei pătratice în baza veche.
 - $A'$ este matricea în baza nouă.
-- $P$ este [matricea de trecere](/symbols#matricea-de-trecere) de la baza veche la baza nouă.
+- $P$ este [matricea de trecere](/algebra/spatii-vectoriale/operatii.md#matricea-de-trecere) de la baza veche la baza nouă.
 - $P^\top$ este transpusa lui $P$.
-
-### Demonstrație
-
-Fie $\mathbf{x} = P \mathbf{x}'$, unde $\mathbf{x}'$ sunt coordonatele vectorului $\mathbf{x}$ în baza nouă. Atunci:
-
-$$
-Q(\mathbf{x}) = \mathbf{x}^\top A \mathbf{x} = (\mathbf{x}')^\top P^\top A P \mathbf{x}'.
-$$
-
-Rezultă că matricea formei pătratice în baza nouă este $A' = P^\top A P$.
 
 ### Diagonalizarea Formei Pătratice
 
@@ -180,7 +170,7 @@ Scopul diagonalizării este de a găsi o bază în care matricea formei pătrati
 
 #### Metodă
 
-- **Calcularea valorilor proprii și vectorilor proprii** ai matricei $A$.
+- **Calcularea [valorilor proprii](/algebra/valori-proprii-si-vectori-proprii.md) și a vectorilor proprii** ai matricei $A$.
 - Construirea matricei $P$ având vectorii proprii ca coloane.
 - Forma pătratică devine:
 
@@ -188,7 +178,7 @@ Scopul diagonalizării este de a găsi o bază în care matricea formei pătrati
   Q(\mathbf{x}) = (\mathbf{x}')^\top D \mathbf{x}',
   $$
 
-  unde $D$ este [matricea diagonală](/symbols#matrice-diagonala) conținând valorile proprii ale lui $A$.
+  unde $D$ este [matricea diagonală](/algebra/diagonalizarea-matricelor.md#matrice-diagonala) conținând valorile proprii ale lui $A$.
 
 ## Forma Canonică a unei Forme Pătratice
 
@@ -198,8 +188,13 @@ $$
 Q(\mathbf{x}) = \lambda_1 {x'_1}^2 + \lambda_2 {x'_2}^2 + \ldots + \lambda_n {x'_n}^2,
 $$
 
-unde $\mathbf{x}' = P^{-1} \mathbf{x}$ și $\lambda_i$ sunt [valorile proprii](/symbols#valori-proprii) ale matricei $A$.
+unde $\mathbf{x}' = P^{-1} \mathbf{x}$ și $\lambda_i$ sunt [valorile proprii](/algebra/valori-proprii-si-vectori-proprii.md#valori-proprii) ale matricei $A$.
 
 ## Concluzie
 
-Reprezentarea formelor pătratice prin matrice simetrice și înțelegerea modului în care acestea se transformă la schimbarea bazei sunt esențiale pentru studiul aprofundat al algebrei liniare. Diagonalizarea formelor pătratice facilitează analiza acestora și are aplicații în diverse domenii ale matematicii și fizicii.
+Reprezentarea formelor pătratice prin matrice simetrice și înțelegerea modului în care acestea se transformă la schimbarea bazei sunt esențiale pentru studiul aprofundat al algebrei liniare. Diagonalizarea formelor pătratice facilitează analiza acestora și are aplicații în diverse domenii ale matematicii și fizicii, precum [analiza numerica](/algebra/analiza-numerica.md) și [mecanica cuantică](https://ro.wikipedia.org/wiki/Mecanic%C4%83_cuantic%C4%83).
+
+## Legături Externe
+
+- [Wikipedia - Formă Pătratică](https://ro.wikipedia.org/wiki/Form%C4%83_p%C4%83tratic%C4%83)
+- [Matematică Online - Forme Pătratice](https://www.mateinfo.ro/forme-patratice)

@@ -61,6 +61,62 @@ $$
 A^c = U \setminus A.
 $$
 
+### Produsul Cartezien
+
+**Produsul cartezian** a două mulțimi $A$ și $B$ este mulțimea tuturor perechilor ordonate $(a, b)$, unde $a \in A$ și $b \in B$:
+
+$$
+A \times B = \{ (a, b) \mid a \in A \ \text{și} \ b \in B \}.
+$$
+
+Produsul cartezian creează o nouă mulțime formată din toate combinațiile posibile de elemente din $A$ și $B$.
+
+#### Exemple
+
+1. **Produsul a două mulțimi finite**
+
+   Fie $A = \{1, 2\}$ și $B = \{a, b, c\}$. Atunci:
+
+   $$
+   A \times B = \{ (1, a), \ (1, b), \ (1, c), \ (2, a), \ (2, b), \ (2, c) \}.
+   $$
+
+2. **Planul Euclidian**
+
+   Dacă $A = \mathbb{R}$ și $B = \mathbb{R}$, atunci produsul cartezian $A \times B = \mathbb{R} \times \mathbb{R}$ reprezintă mulțimea tuturor perechilor $(x, y)$ cu $x, y \in \mathbb{R}$, adică planul euclidian $\mathbb{R}^2$.
+
+#### Proprietăți
+
+- **Cardinalul produsului cartezian**: Dacă $A$ și $B$ sunt mulțimi finite, atunci:
+
+  $$
+  |A \times B| = |A| \times |B|.
+  $$
+
+- **Asociativitatea produsului cartezian**:
+
+  Deși produsul cartezian nu este strict asociativ deoarece tipurile elementelor diferă, există o corespondență naturală între $(A \times B) \times C$ și $A \times (B \times C)$, permițându-ne să le identificăm în practică.
+
+- **Comutativitatea produsului cartezian**:
+
+  În general, produsul cartezian nu este comutativ:
+
+  $$
+  A \times B \neq B \times A,
+  $$
+
+  deoarece perechile ordonate $(a, b)$ și $(b, a)$ sunt diferite, cu excepția cazului în care $A = B$ și $a = b$.
+
+#### Notă
+
+Produsul cartezian poate fi extins la mai multe mulțimi:
+
+$$
+A_1 \times A_2 \times \ldots \times A_n = \{ (a_1, a_2, \ldots, a_n) \mid a_i \in A_i, \ \forall i = 1, 2, \ldots, n \}.
+$$
+
+Aceasta este baza pentru definirea spațiilor multidimensionale, cum ar fi $\mathbb{R}^n$, și pentru studiul relațiilor și funcțiilor între mulțimi.
+
 ## Submulțimi și Incluziune
 
 ### Submulțime

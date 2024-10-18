@@ -13,42 +13,68 @@ export default defineConfig({
       { text: 'Algebră', link: '/algebra', activeMatch: '^/algebra/' },
       { text: 'Geometrie', link: '/geometrie', activeMatch: '^/geometrie/' },
       { text: 'Notații', link: '/symbols' },
+      {
+        text: 'Rezolvări',
+        link: '/rezolvari',
+      },
     ],
 
     sidebar: {
-      '/algebra/': [
-        {
-          text: 'Algebră Liniară',
-          link: '/algebra/',
-          items: [
-            { text: 'Matricea unei Forme Pătratice', link: '/algebra/matricea-formei-patratice' },
-            {
-              text: 'Spații Vectoriale',
-              link: '/algebra/spatii-vectoriale',
-              items: [
-                {
-                  text: 'Peste ℝ',
-                  link: '/algebra/spatii-vectoriale/real',
-                },
-                {
-                  text: 'Spațiul Vectorial ℝⁿ',
-                  link: '/algebra/spatii-vectoriale/real-n',
-                },
-                {
-                  text: 'Operații și Proprietăți în Spații Vectoriale',
-                  link: '/algebra/spatii-vectoriale/operatii',
-                },
-              ],
-            },
-          ],
-        },
-      ],
+      '/algebra/': {
+        base: '/algebra/',
+        items: [
+          {
+            text: 'Algebră Liniară',
+            link: '/',
+            items: [
+              { text: 'Matricea unei Forme Pătratice', link: '/matricea-formei-patratice' },
+              {
+                text: 'Spații Vectoriale',
+                link: '/spatii-vectoriale',
+                items: [
+                  {
+                    text: 'Peste ℝ',
+                    link: '/spatii-vectoriale/real',
+                  },
+                  {
+                    text: 'Spațiul Vectorial ℝⁿ',
+                    link: '/spatii-vectoriale/real-n',
+                  },
+                  {
+                    text: 'Operații și Proprietăți în Spații Vectoriale',
+                    link: '/spatii-vectoriale/operatii',
+                  },
+                ],
+              },
+              {
+                text: 'Metoda Gauss',
+                link: '/metoda-gauss',
+              },
+            ],
+          },
+        ],
+      },
       '/geometrie/': {
         base: '/geometrie/',
         items: [
           {
             text: 'Geometrie Afină',
             items: [{ text: 'Spații Afine și Sisteme de Coordonate Afine', link: 'spatii-afine' }],
+          },
+        ],
+      },
+      '/teorie/': {
+        base: '/teorie/',
+        items: [
+          {
+            text: 'Matematică Fundamentală',
+            link: '.',
+            items: [
+              { text: 'Logica Matematică', link: 'logica-matematica' },
+              { text: 'Mulțimi', link: 'multime' },
+              { text: 'Numere Reale', link: 'numere-reale' },
+              { text: 'Relații și Funcții', link: 'relatii-si-functii' },
+            ],
           },
         ],
       },
