@@ -1,5 +1,7 @@
 # Spații Vectoriale {#spatii-vectoriale}
 
+- [Produsul Vectorial](/algebra/spatii-vectoriale/produs-vectorial.md)
+
 ## Definiție
 
 Un **spațiu vectorial** (sau **spațiu liniar**) peste un corp $\mathbb{K}$ este o [mulțime](/teorie/multime) $V$ împreună cu două operații: **adunarea vectorilor** și **înmulțirea unui vector cu un scalar**, care satisfac următoarele proprietăți:

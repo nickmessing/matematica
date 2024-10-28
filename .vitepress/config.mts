@@ -44,6 +44,10 @@ export default defineConfig({
                     text: 'Operații și Proprietăți în Spații Vectoriale',
                     link: '/spatii-vectoriale/operatii',
                   },
+                  {
+                    text: 'Produs Vectorial',
+                    link: '/spatii-vectoriale/produs-vectorial',
+                  },
                 ],
               },
               {
@@ -59,7 +63,11 @@ export default defineConfig({
         items: [
           {
             text: 'Geometrie Afină',
-            items: [{ text: 'Spații Afine și Sisteme de Coordonate Afine', link: 'spatii-afine' }],
+            items: [
+              { text: 'Spații Afine și Sisteme de Coordonate Afine', link: 'spatii-afine' },
+              { text: 'Ecuatii Dreptei în Plan', link: 'ecuatii-dreptei-plan' },
+              { text: 'Ecuatii Dreptei în Planul din Spațiu', link: 'ecuatii-dreptei-planului-spatiu' },
+            ],
           },
         ],
       },

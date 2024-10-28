@@ -1,6 +1,8 @@
 # Geometrie
 
 - [Spații Afine](./spatii-afine.md)
+- [Ecuațiile Dreptei în Plan](./ecuatii-dreptei-plan.md)
+- [Ecuațiile Dreptei și Planului în Spațiu](./ecuatii-dreptei-planului-spatiu.md)
 
 ## Sugestii pentru Teme de Adăugat
 
