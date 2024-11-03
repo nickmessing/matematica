@@ -5,18 +5,24 @@ layout: home
 hero:
   name: 'Conspect la Matematică'
   text: 'Învățăm matematica'
-  tagline: Ajutor de la ChatGPT, moderat de oameni vii
+  tagline: Conspect, conspect, conspect.
   image:
     src: /image.png
     alt: Matematica
   actions:
     - theme: brand
-      text: Matematică Fundamentală
-      link: /teorie
+      text: Simboluri
+      link: /simboluri/index.md
+
     - theme: alt
-      text: Algebră
-      link: /algebra
+      text: Algebra Liniară
+      link: /algebra-liniara/index.md
+
     - theme: alt
       text: Geometrie
-      link: /geometrie
+      link: /geometrie/index.md
+
+    - theme: alt
+      text: Analiză Matematică
+      link: /analiza/index.md
 ---
