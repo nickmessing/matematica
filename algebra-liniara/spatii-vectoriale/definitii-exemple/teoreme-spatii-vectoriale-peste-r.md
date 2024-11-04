@@ -78,3 +78,23 @@ Dacă un sistem de vectori este liniar dependent, atunci orice sistem care conț
 Dacă sistemul de vectori $\left\{\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 2 \\ 4 \end{pmatrix}\right\}$ este liniar dependent (deoarece $2 \cdot \begin{pmatrix} 1 \\ 2 \end{pmatrix} = \begin{pmatrix} 2 \\ 4 \end{pmatrix}$), atunci orice sistem care include acești vectori, cum ar fi $\left\{\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 2 \\ 4 \end{pmatrix}, \begin{pmatrix} 3 \\ 5 \end{pmatrix}\right\}$, va fi de asemenea liniar dependent.
 
 În mod similar, dacă un sistem conține vectorul zero $\theta = \begin{pmatrix} 0 \\ 0 \end{pmatrix}$, de exemplu, $\left\{\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \end{pmatrix}\right\}$, atunci acesta va fi întotdeauna liniar dependent.
+
+## Teorema Completării Sistemului Liniar Independent {#teorema-completarii-sistem-liniar-independent}
+
+**Enunț:**
+
+Fie $V$ un spațiu vectorial peste $\mathbb{R}$ de dimensiune $n$. $\forall\, \mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_k \in V$, unde $k < n$ și sistemul $\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_k\}$ este liniar independent, poate fi completat cu $n - k$ vectori astfel încât sistemul rezultat să fie o bază a spațiului $V$.
+
+**Exemplu:**
+
+- În $\mathbb{R}^3$, sistemul $\left\{\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}\right\}$ este liniar independent. Acesta poate fi completat cu un singur vector, de exemplu $\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}$, pentru a forma o bază a spațiului $\mathbb{R}^3$.
+
+## Teorema Echivalenței Bazelor {#teorema-echivalenta-bazelor}
+
+**Enunț:**
+
+Fie $V$ un spațiu vectorial finit generat și $S = \{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ un sistem de $n$ vectori din $V$. Următoarele afirmații sunt echivalente:
+
+1. Sistemul $S$ este o bază a spațiului $V$.
+2. Sistemul $S$ generează pe $V$ și orice subsistem propriu al său nu mai generează pe $V$.
+3. Sistemul $S$ este liniar independent și $\forall$ sistem de vectori din $V$ care conține elementele din $S$ (dar nu numai) este liniar dependent.
