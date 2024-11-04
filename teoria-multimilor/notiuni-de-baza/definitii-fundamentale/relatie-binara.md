@@ -132,13 +132,13 @@ $$
 
 ## Rezumat al proprietăților
 
-| Proprietate       | Definiție                                                                              |
-| ----------------- | -------------------------------------------------------------------------------------- |
-| Reflexivitate     | $\forall a \in A, \ a \ \rho \ a$                                                      |
-| Antireflexivitate | $\forall a \in A, \ (a, a) \notin \rho$                                                |
-| Simetrie          | $\forall a, b \in A, \ a \ \rho \ b \implies b \ \rho \ a$                             |
-| Antisimetrie      | $\forall a, b \in A, \ a \ \rho \ b \text{ și } b \ \rho \ a \implies a = b$           |
-| Tranzitivitate    | $\forall a, b, c \in A, \ a \ \rho \ b \text{ și } b \ \rho \ c \implies a \ \rho \ c$ |
+| Proprietate       | Definiție                                                                        |
+| ----------------- | -------------------------------------------------------------------------------- |
+| Reflexivitate     | $\forall a \in A, \ a \ \rho \ a$                                                |
+| Antireflexivitate | $\forall a \in A, \ (a, a) \notin \rho$                                          |
+| Simetrie          | $\forall a, b \in A, \ a \ \rho \ b \implies b \ \rho \ a$                       |
+| Antisimetrie      | $\forall a, b \in A, \ a \ \rho \ b \land b \ \rho \ a \implies a = b$           |
+| Tranzitivitate    | $\forall a, b, c \in A, \ a \ \rho \ b \land b \ \rho \ c \implies a \ \rho \ c$ |
 
 ## Exemple
 

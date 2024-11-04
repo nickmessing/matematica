@@ -28,8 +28,6 @@ $$
 
 atunci vectorii $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ se numesc **liniar dependenți**.
 
-##
-
 ## Sistem liniar independent {#sistem-liniar-independent}
 
 Dacă singura combinație liniară a vectorilor $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ care dă vectorul nul este cea trivială, adică:
@@ -83,11 +81,23 @@ $$
 
 care au componentele nule, cu excepția componentei de pe poziția $i$, care este egală cu 1.
 
+## Coordonate ale unui vector în raport cu o bază {#coordonate-ale-unui-vector-in-raport-cu-o-baza}
+
+Fie $V$ un [spațiu vectorial](/algebra-liniara/spatii-vectoriale/definitii-exemple/spatii-vectoriale-peste-r.md#definitia-spatiului-vectorial-peste) finit-dimensional și $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ o [bază](/algebra-liniara/spatii-vectoriale/definitii-exemple/definitii.md#baza) a lui $V$. Orice vector $\mathbf{x} \in V$ poate fi scris ca o combinație liniară a vectorilor bazei:
+
+$$
+\mathbf{x} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \dotsb + \alpha_n \mathbf{v}_n = \sum_{i=1}^n \alpha_i \mathbf{v}_i.
+$$
+
+**Coeficienții** $\alpha_1, \alpha_2, \dotsc, \alpha_n$ se numesc **coordonatele** vectorului $\mathbf{x}$ în raport cu baza $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$.
+
 ## Dimensiune {#dimensiune}
 
 **Dimensiunea** unui spațiu vectorial $V$, notată $\dim V$, este numărul de vectori dintr-o [**bază**](/algebra-liniara/spatii-vectoriale/definitii-exemple/definitii.md#baza) a lui $V$.
 
 Pentru un spațiu vectorial finit-dimensional, toate bazele sale au același număr finit de elemente. Astfel, dimensiunea este bine definită și reprezintă **numărul minim de vectori necesari pentru a genera spațiul** și **numărul maxim de vectori liniar independenți** din spațiu.
+
+Prin convenție, dimensiunea spațiului vectorial nul ($V = \{\theta\}$) este 0. ($\dim (V) = 0$).
 
 ### Observații:
 
@@ -133,3 +143,9 @@ Un **vector** este un element al unui [spațiu vectorial](/algebra-liniara/spati
 ## Scalar {#scalar}
 
 Un **scalar** este un element al corpului $\mathbb{R}$ sau $\mathbb{C}$, care este folosit pentru a înmulți un vector dintr-un spațiu vectorial.
+
+## Spațiu vectorial finit generat {#spatiu-vectorial-finit-generat}
+
+Un spațiu vectorial $V$ este **finit generat** dacă $\exists \mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n \in V, n \in \mathbb{N}_+, n \neq \infty$ astfel încât orice vector $\mathbf{x} \in V$ poate fi scris ca o combinație liniară a acestora. Adică, $\forall \mathbf{x} \in V, \exists \alpha_1, \alpha_2, \dotsc, \alpha_n \in \mathbb{R}$ astfel încât: $\sum_{i=1}^n \alpha_i \mathbf{v}_i = \mathbf{x}$.
+
+Prin convenție se consideră că spațiul vectorial nul ($V = \{\theta\}$) este finit generat, deoarece poate fi generat de mulțimea vidă ($\emptyset$).
