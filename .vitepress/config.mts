@@ -56,6 +56,11 @@ export default defineConfig({
             link: '/geometrie/afine',
             activeMatch: '^/geometrie/afine',
           },
+          {
+            text: 'Geometrie analitică',
+            link: '/geometrie/analitica',
+            activeMatch: '^/geometrie/analitica',
+          },
         ],
       },
       {
@@ -179,6 +184,17 @@ export default defineConfig({
             {
               text: 'Teoreme',
               link: 'teoreme',
+            },
+          ],
+        },
+        {
+          text: 'Geometrie analitică',
+          base: '/geometrie/analitica/',
+          link: '.',
+          items: [
+            {
+              text: 'Bipunct',
+              link: 'bipunct',
             },
           ],
         },

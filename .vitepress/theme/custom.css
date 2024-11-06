@@ -1,0 +1,19 @@
+.svg-node-focused {
+  color: var(--vp-c-important-2);
+}
+
+.svg-node-transparent {
+  color: rgba(0, 0, 0, 0);
+}
+
+.clickable-graph {
+  cursor: pointer;
+  outline: dashed 1px var(--vp-c-important-1);
+  border-radius: 2px;
+  outline-offset: 1px;
+
+  &.selected {
+    outline: dashed 1px var(--vp-c-important-2);
+    background: var(--vp-c-default-2);
+  }
+}
