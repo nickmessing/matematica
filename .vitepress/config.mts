@@ -92,6 +92,10 @@ export default defineConfig({
                   text: 'Produs scalar',
                   link: 'definitii-exemple/produs-scalar',
                 },
+                {
+                  text: 'Subspații vectoriale',
+                  link: 'definitii-exemple/subspatii',
+                },
               ],
             },
           ],

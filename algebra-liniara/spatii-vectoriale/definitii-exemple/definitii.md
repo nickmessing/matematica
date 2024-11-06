@@ -14,16 +14,31 @@ se numește **combinație liniară** a vectorilor $\mathbf{v}_1, \mathbf{v}_2, \
 
 Scalarii $\alpha_1, \alpha_2, \dotsc, \alpha_n \in \mathbb{R}$ se numesc **coeficienți**.
 
+## Sistem de vectori {#sistem-vectori}
+
+Un șir finit de vectori $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ se numește **sistem de vectori**.
+
 ## Sistem de generatori {#sistem-generatori}
 
-Dacă $\forall\ \mathbf{x} \in V$ poate fi scris ca o combinație liniară a unui șir finit de vectori $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$, atunci $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ se numesc **sistem de generatori** pentru $V$.
+Dacă $\forall\ \mathbf{x} \in V$ poate fi scris ca o combinație liniară a unui [sistem de vectori](#sistem-vectori) $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ și sistemul este liniar independent, atunci $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ se numesc **sistem de generatori** pentru $V$.
+
+### Notație:
+
+Dacă $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ sunt generatori pentru $V$, se notează:
+
+$$
+sg(V) = \{\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n\}.
+$$
 
 ## Sistem liniar dependent {#sistem-liniar-dependent}
 
 Dacă există scalari $\alpha_1, \alpha_2, \dotsc, \alpha_n$, nu toți nuli, astfel încât:
 
 $$
-\sum_{i=1}^n \alpha_i \mathbf{v}_i = 0
+
+\sum\_{i=1}^n \alpha_i \mathbf{v}\_i = 0
+
+
 $$
 
 atunci vectorii $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ se numesc **liniar dependenți**.
@@ -33,7 +48,10 @@ atunci vectorii $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ se numesc **l
 Dacă singura combinație liniară a vectorilor $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ care dă vectorul nul este cea trivială, adică:
 
 $$
-\sum_{i=1}^n \alpha_i \mathbf{v}_i = 0 \Rightarrow \alpha_1 = \alpha_2 = \dotsb = \alpha_n = 0
+
+\sum\_{i=1}^n \alpha_i \mathbf{v}\_i = 0 \Rightarrow \alpha_1 = \alpha_2 = \dotsb = \alpha_n = 0
+
+
 $$
 
 atunci vectorii $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ se numesc **liniar independenți**.
@@ -47,19 +65,25 @@ Pentru a determina dacă un sistem de vectori $\mathbf{v}_1, \mathbf{v}_2, \dots
 Fie vectorii $\mathbf{v}_1 = \begin{pmatrix} 1 \\ 2 \end{pmatrix}$ și $\mathbf{v}_2 = \begin{pmatrix} 3 \\ 4 \end{pmatrix}$. Pentru a verifica dacă acești vectori sunt liniar independenți, se formează matricea:
 
 $$
+
 \begin{pmatrix}
 1 & 3 \\
 2 & 4 \\
 \end{pmatrix}
+
+
 $$
 
 și se calculează determinantul acesteia:
 
 $$
+
 \begin{vmatrix}
 1 & 3 \\
 2 & 4 \\
 \end{vmatrix} = 1 \cdot 4 - 3 \cdot 2 = 4 - 6 = -2.
+
+
 $$
 
 Deoarece determinantul este nenul, vectorii $\mathbf{v}_1$ și $\mathbf{v}_2$ sunt liniar independenți.
@@ -73,10 +97,13 @@ Un [**sistem de generatori** $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$]
 În spațiul vectorial $\mathbb{R}^n$, baza canonică este formată din vectorii
 
 $$
-\mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix},
-\mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{pmatrix},
+
+\mathbf{e}\_1 = \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix},
+\mathbf{e}\_2 = \begin{pmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{pmatrix},
 \dotsc,
-\mathbf{e}_n = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix}
+\mathbf{e}\_n = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix}
+
+
 $$
 
 care au componentele nule, cu excepția componentei de pe poziția $i$, care este egală cu 1.
@@ -86,7 +113,10 @@ care au componentele nule, cu excepția componentei de pe poziția $i$, care est
 Fie $V$ un [spațiu vectorial](/algebra-liniara/spatii-vectoriale/definitii-exemple/spatii-vectoriale-peste-r.md#definitia-spatiului-vectorial-peste) finit-dimensional și $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ o [bază](/algebra-liniara/spatii-vectoriale/definitii-exemple/definitii.md#baza) a lui $V$. Orice vector $\mathbf{x} \in V$ poate fi scris ca o combinație liniară a vectorilor bazei:
 
 $$
-\mathbf{x} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \dotsb + \alpha_n \mathbf{v}_n = \sum_{i=1}^n \alpha_i \mathbf{v}_i.
+
+\mathbf{x} = \alpha*1 \mathbf{v}\_1 + \alpha_2 \mathbf{v}\_2 + \dotsb + \alpha_n \mathbf{v}\_n = \sum*{i=1}^n \alpha_i \mathbf{v}\_i.
+
+
 $$
 
 **Coeficienții** $\alpha_1, \alpha_2, \dotsc, \alpha_n$ se numesc **coordonatele** vectorului $\mathbf{x}$ în raport cu baza $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$.
@@ -149,3 +179,13 @@ Un **scalar** este un element al corpului $\mathbb{R}$ sau $\mathbb{C}$, care es
 Un spațiu vectorial $V$ este **finit generat** dacă $\exists \mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n \in V, n \in \mathbb{N}_+, n \neq \infty$ astfel încât orice vector $\mathbf{x} \in V$ poate fi scris ca o combinație liniară a acestora. Adică, $\forall \mathbf{x} \in V, \exists \alpha_1, \alpha_2, \dotsc, \alpha_n \in \mathbb{R}$ astfel încât: $\sum_{i=1}^n \alpha_i \mathbf{v}_i = \mathbf{x}$.
 
 Prin convenție se consideră că spațiul vectorial nul ($V = \{\theta\}$) este finit generat, deoarece poate fi generat de mulțimea vidă ($\emptyset$).
+
+## Rangul unui sistem de vectori {#rang}
+
+Rangul unui sistem de vectori $\mathbf{v}_1, \mathbf{v}_2, \dotsc, \mathbf{v}_n$ este cel mai mare număr de vectori liniar independenți din sistem.
+
+Adică, rangul unui sistem de vectori este dimensiunea [sistemului de generatori](#sistem-generatori).
+
+$$
+\text{rang}(V) = \text{dim}(sg(V)).
+$$
