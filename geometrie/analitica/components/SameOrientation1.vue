@@ -113,11 +113,12 @@ const { Component: PointD } = usePoint(() => ({
   color: var(--vp-c-text-1);
 
   .semiplan {
-    fill: var(--vp-c-bg-alt);
+    fill: var(--vp-c-important-2);
     opacity: 0;
+    transition: opacity 0.15s ease;
 
     &.active {
-      opacity: 1;
+      opacity: 0.3;
     }
   }
 }

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import SameOrientation1 from './components/SameOrientation1.vue'
 import SameOrientation2 from './components/SameOrientation2.vue'
+import Echipolenta1 from './components/Echipolenta1.vue'
+import Echipolenta2 from './components/Echipolenta2.vue'
 </script>
 
 # Bipunct {#bipunct}
@@ -79,3 +81,38 @@ $\, \cap \,$
 $=$
 <span class="clickable-graph" data-id="cd-half-line" data-so-22>$\left[ AB \right.$</span>
 <SameOrientation2 reversed dataSuffix="so-22" />
+
+## Echipolența bipunctelor {#echipolenta-bipuncte}
+
+2 bipuncte
+<span class="clickable-graph" data-id="ab-segment" data-echi-1 data-echi-2>$(A, B)$</span>
+și
+<span class="clickable-graph" data-id="cd-segment" data-echi-1 data-echi-2>$(C, D)$</span>
+proprii se numesc **echipolente** dacă mijloacele segmentelor
+<span class="clickable-graph" data-id="ad-segment" data-echi-1 data-echi-2>$[AD]$</span>
+și
+<span class="clickable-graph" data-id="bc-segment" data-echi-1 data-echi-2>$[BC]$</span>
+coincid, adică
+<span class="clickable-graph" data-id="m-point" data-echi-1 data-echi-2>$M = M_{AB} = M_{CD}$</span>
+.
+
+<Echipolenta1 data-suffix="echi-1" />
+<Echipolenta2 data-suffix="echi-2" />
+
+Echipolența bipunctelor se notează cu $(A, B) \sim (C, D)$.
+
+### Teorema Paralelogramului pentru Echipolența Bipunctelor {#teorema-paralelogramului}
+
+Dacă punctele $A, B, C, D$ sunt ne coliniare, atunci $(A, B) \sim (C, D)$ dacă și numai dacă $ABCD$ este un paralelogram.
+
+### Teorema Existenței și Unicității Bipunctului Echipolent cu Origine Dată {#teorema-existenta-unicitate}
+
+Fie un bipunct $(A, B) \in P \times P$ și un punct $O \in P$, atunci există un unic punct $X$ astfel încât $(O, X) \sim (A, B)$.
+
+### Teorema Proprietăților Bipunctelor Echipolente {#teorema-proprietati}
+
+$\forall$ două bipuncte $(A, B) \sim (C, D)$, $(A, B)$ și $(C, D)$ sunt **la fel orientate** și $|AB| = |CD|$.
+
+### Teorema Relației de Echivalență a Echipolenței Bipunctelor {#teorema-relatie-echivalenta}
+
+Relația de echipolență a bipunctelor este o relație de echivalență.

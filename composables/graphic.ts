@@ -117,6 +117,7 @@ export type UsePointOptions = {
   point: Point
   size?: number
   color?: string
+  circleClass?: string
   labelText?: string
   labelAngle?: number
   labelOffset?: number
@@ -138,6 +139,7 @@ export function usePoint(options: MaybeRefOrGetter<UsePointOptions>) {
       cy: optionsWithDefaults.value.point.y,
       r: optionsWithDefaults.value.size,
       fill: optionsWithDefaults.value.color,
+      class: optionsWithDefaults.value.circleClass,
     }),
   )
 
