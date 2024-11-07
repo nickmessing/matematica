@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Reprezentant from './components/Reprezentant.vue'
+import SumaVectorilor from './components/SumaVectorilor.vue'
 </script>
 
 # Vector {#vector}
@@ -65,3 +66,48 @@ $\forall A, B, O \in P$, $\exists!X \in P$ astfel încât $\overrightarrow{AB} =
 $$
 \overrightarrow{AB} = \overrightarrow{OX} \Leftrightarrow \overrightarrow{OX} = \overrightarrow{AB}.
 $$
+
+## Operații cu Vectori
+
+### Adunarea Vectorilor
+
+Dacă
+<span class="clickable-graph" data-id="a-point" data-sum>$A$</span>,
+<span class="clickable-graph" data-id="b-point" data-sum>$B$</span>,
+<span class="clickable-graph" data-id="c-point" data-sum>$C$</span>
+$\in P$, atunci vectorul
+<span class="clickable-graph" data-id="ab-line" data-sum>$\overrightarrow{AB}$</span>
+$+$
+<span class="clickable-graph" data-id="bc-line" data-sum>$\overrightarrow{BC}$</span>
+se numește **suma vectorilor**
+<span class="clickable-graph" data-id="ab-line" data-sum>$\overrightarrow{AB}$</span>
+și
+<span class="clickable-graph" data-id="bc-line" data-sum>$\overrightarrow{BC}$</span>
+și se notează cu
+<span class="clickable-graph" data-id="ac-line" data-sum>$\overrightarrow{AC}$</span>.
+
+<span class="clickable-graph" data-id="x-line" data-sum>$x$</span>
+$\;=\;$
+<span class="clickable-graph" data-id="ab-line" data-sum>$\overrightarrow{AB}$</span>
+,
+<span class="clickable-graph" data-id="y-line" data-sum>$y$</span>
+$\;=\;$
+<span class="clickable-graph" data-id="bc-line" data-sum>$\overrightarrow{BC}$</span>
+,
+<span class="clickable-graph" data-id="z-line" data-sum>$z$</span>
+$\;=\;$
+<span class="clickable-graph" data-id="ac-line" data-sum>$\overrightarrow{AC}$</span>.
+
+<span class="clickable-graph" data-id="ab-line" data-sum>$\overrightarrow{AB}$</span>
+$+$
+<span class="clickable-graph" data-id="bc-line" data-sum>$\overrightarrow{BC}$</span>
+$=$
+<span class="clickable-graph" data-id="ac-line" data-sum>$\overrightarrow{AC}$</span>
+$\Leftrightarrow$
+<span class="clickable-graph" data-id="x-line" data-sum>$x$</span>
+$+$
+<span class="clickable-graph" data-id="y-line" data-sum>$y$</span>
+$=$
+<span class="clickable-graph" data-id="z-line" data-sum>$z$</span>.
+
+<SumaVectorilor dataSuffix="sum" />
