@@ -111,18 +111,12 @@ export default defineConfig({
           link: '.',
           items: [
             {
-              text: 'Definiții și exemple',
-              link: 'definitii-exemple',
-              items: [
-                {
-                  text: 'Matrice',
-                  link: 'definitii-exemple/matrice',
-                },
-                {
-                  text: 'Matrice de tranziție',
-                  link: 'definitii-exemple/matrice-de-tranzitie',
-                },
-              ],
+              text: 'Matrice',
+              link: 'matrice',
+            },
+            {
+              text: 'Matrice de tranziție',
+              link: 'matrice-de-tranzitie',
             },
           ],
         },
@@ -196,12 +190,16 @@ export default defineConfig({
               text: 'Bipunct',
               link: 'bipunct',
             },
+            {
+              text: 'Vector',
+              link: 'vector',
+            },
           ],
         },
       ],
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/nickmessing/matematica' }],
 
     search: {
       provider: 'local',
