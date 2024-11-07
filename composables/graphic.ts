@@ -113,6 +113,40 @@ export function useLine(options: MaybeRefOrGetter<UseLineOptions>) {
   }
 }
 
+export type UseTextOptions = {
+  location: Point
+  text?: string
+  class?: string
+}
+export const defaultUseTextOptions = {} as const satisfies Pick<UseTextOptions, OptionalKeysOf<UseTextOptions>>
+export function useText(options: MaybeRefOrGetter<UseTextOptions>) {
+  const optionsReference = toRef(options)
+  const optionsWithDefaults = computed(() => ({ ...defaultUseTextOptions, ...optionsReference.value }))
+
+  const labelVNode = computed(() =>
+    optionsWithDefaults.value.text
+      ? h(
+          'text',
+          {
+            x: optionsWithDefaults.value.location.x,
+            y: optionsWithDefaults.value.location.y,
+            fill: 'currentColor',
+            'dominant-baseline': 'middle',
+            'text-anchor': 'middle',
+            class: optionsWithDefaults.value.class,
+          },
+          optionsWithDefaults.value.text,
+        )
+      : undefined,
+  )
+
+  const Component = () => labelVNode.value
+
+  return {
+    Component,
+  }
+}
+
 export type UsePointOptions = {
   point: Point
   size?: number
@@ -143,28 +177,20 @@ export function usePoint(options: MaybeRefOrGetter<UsePointOptions>) {
     }),
   )
 
-  const labelVNode = computed(() =>
-    optionsWithDefaults.value.labelText
-      ? h(
-          'text',
-          {
-            x:
-              optionsWithDefaults.value.point.x +
-              optionsWithDefaults.value.labelOffset * Math.sin(optionsWithDefaults.value.labelAngle),
-            y:
-              optionsWithDefaults.value.point.y -
-              optionsWithDefaults.value.labelOffset * Math.cos(optionsWithDefaults.value.labelAngle),
-            fill: optionsWithDefaults.value.color,
-            'dominant-baseline': 'middle',
-            'text-anchor': 'middle',
-            class: optionsWithDefaults.value.labelClass,
-          },
-          optionsWithDefaults.value.labelText,
-        )
-      : undefined,
-  )
+  const { Component: LabelComponent } = useText(() => ({
+    location: {
+      x:
+        optionsWithDefaults.value.point.x +
+        optionsWithDefaults.value.labelOffset * Math.sin(optionsWithDefaults.value.labelAngle),
+      y:
+        optionsWithDefaults.value.point.y -
+        optionsWithDefaults.value.labelOffset * Math.cos(optionsWithDefaults.value.labelAngle),
+    },
+    text: optionsWithDefaults.value.labelText,
+    class: optionsWithDefaults.value.labelClass,
+  }))
 
-  const Component = () => [circleVNode.value, labelVNode.value]
+  const Component = () => [circleVNode.value, LabelComponent()]
 
   return {
     Component,

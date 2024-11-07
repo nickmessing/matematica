@@ -3,6 +3,7 @@ import SameOrientation1 from './components/SameOrientation1.vue'
 import SameOrientation2 from './components/SameOrientation2.vue'
 import Echipolenta1 from './components/Echipolenta1.vue'
 import Echipolenta2 from './components/Echipolenta2.vue'
+import Reprezentant from './components/Reprezentant.vue'
 </script>
 
 # Bipunct {#bipunct}
@@ -96,8 +97,8 @@ coincid, adică
 <span class="clickable-graph" data-id="m-point" data-echi-1 data-echi-2>$M = M_{AB} = M_{CD}$</span>
 .
 
-<Echipolenta1 data-suffix="echi-1" />
-<Echipolenta2 data-suffix="echi-2" />
+<Echipolenta1 dataSuffix="echi-1" />
+<Echipolenta2 dataSuffix="echi-2" />
 
 Echipolența bipunctelor se notează cu $(A, B) \sim (C, D)$.
 
@@ -116,3 +117,29 @@ $\forall$ două bipuncte $(A, B) \sim (C, D)$, $(A, B)$ și $(C, D)$ sunt **la f
 ### Teorema Relației de Echivalență a Echipolenței Bipunctelor {#teorema-relatie-echivalenta}
 
 Relația de echipolență a bipunctelor este o relație de echivalență.
+
+## Vectori liberi {#vectori-liberi}
+
+Clasele de echivalență determinate de relația de echipolență a bipunctelor se numesc **vectori liberi**.
+
+Notăm:
+
+$$
+\overrightarrow{AB} = \{(X, Y) \in P \times P \mid (A, B) \sim (X, Y)\}
+$$
+
+## Reprezentanți ai vectorilor {#reprezentanti-vectori}
+
+Orice bipunct
+<span class="clickable-graph" data-id="xy-segment" data-repr>$(X, Y)$</span>
+$\in$
+<span class="clickable-graph" data-id="ab-segment" data-repr>$\overrightarrow{AB}$</span>
+$=$
+<span class="clickable-graph" data-id="ab-segment" data-repr>$v$</span>
+din clasa de echivalență a bipunctului
+<span class="clickable-graph" data-id="ab-segment" data-repr>$(A, B)$</span>
+se numește **reprezentant** al vectorului
+<span class="clickable-graph" data-id="ab-segment" data-repr>$\overrightarrow{AB}$</span>
+.
+
+<Reprezentant dataSuffix="repr" />
