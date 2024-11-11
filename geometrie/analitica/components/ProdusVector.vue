@@ -12,7 +12,7 @@ const listeningElements = shallowRef<HTMLElement[]>([])
 const alpha = ref(0.2)
 
 onMounted(() => {
-  listeningElements.value = [...document.querySelectorAll<HTMLElement>(`[data-${dataSuffix}]`)]
+  listeningElements.value = [...document?.querySelectorAll<HTMLElement>(`[data-${dataSuffix}]`)]
 })
 
 const { selectedElementId } = useInteraction(listeningElements)

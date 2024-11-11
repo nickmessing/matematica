@@ -156,6 +156,7 @@ export type UsePointOptions = {
   labelAngle?: number
   labelOffset?: number
   labelClass?: string
+  isCircleHidden?: boolean
 }
 export const defaultUsePointOptions = {
   size: 5,
@@ -190,9 +191,124 @@ export function usePoint(options: MaybeRefOrGetter<UsePointOptions>) {
     class: optionsWithDefaults.value.labelClass,
   }))
 
-  const Component = () => [circleVNode.value, LabelComponent()]
+  const Component = () => [optionsWithDefaults.value.isCircleHidden ? null : circleVNode.value, LabelComponent()]
 
   return {
     Component,
   }
+}
+
+export type UseCoordinatesOptions = {
+  height: number
+  width: number
+  origin?: Point
+}
+export function useCoordinates(options: MaybeRefOrGetter<UseCoordinatesOptions>) {
+  const optionsReference = toRef(options)
+
+  const xLeft = computed(() => 0)
+  const xRight = computed(() => optionsReference.value.width)
+  const yTop = computed(() => 0)
+  const yBottom = computed(() => optionsReference.value.height)
+
+  const originX = computed(() => optionsReference.value.origin?.x ?? xRight.value / 2)
+  const originY = computed(() => optionsReference.value.origin?.y ?? yBottom.value / 2)
+
+  const { Component: XLineComponent } = useLine(() => ({
+    line: {
+      start: { x: xLeft.value, y: originY.value },
+      end: { x: xRight.value, y: originY.value },
+    },
+    width: 1,
+  }))
+  const { Component: YLineComponent } = useLine(() => ({
+    line: {
+      start: { x: originX.value, y: yTop.value },
+      end: { x: originX.value, y: yBottom.value },
+    },
+    width: 1,
+  }))
+  const { Component: XLineArrowUpHalf } = useLine(() => ({
+    line: {
+      start: { x: xRight.value, y: originY.value },
+      end: { x: xRight.value - 10, y: originY.value - 5 },
+    },
+    width: 1,
+  }))
+  const { Component: XLineArrowDownHalf } = useLine(() => ({
+    line: {
+      start: { x: xRight.value, y: originY.value },
+      end: { x: xRight.value - 10, y: originY.value + 5 },
+    },
+    width: 1,
+  }))
+  const { Component: YLineArrowLeftHalf } = useLine(() => ({
+    line: {
+      start: { x: originX.value, y: yTop.value },
+      end: { x: originX.value - 5, y: yTop.value + 10 },
+    },
+    width: 1,
+  }))
+  const { Component: YLineArrowRightHalf } = useLine(() => ({
+    line: {
+      start: { x: originX.value, y: yTop.value },
+      end: { x: originX.value + 5, y: yTop.value + 10 },
+    },
+    width: 1,
+  }))
+
+  const { Component: XLabel } = usePoint(() => ({
+    point: { x: xRight.value, y: originY.value },
+    labelText: 'x',
+    labelAngle: (5 / 4) * Math.PI,
+    labelOffset: 20,
+    isCircleHidden: true,
+  }))
+  const { Component: YLabel } = usePoint(() => ({
+    point: { x: originX.value, y: yTop.value },
+    labelText: 'y',
+    labelAngle: (3 / 4) * Math.PI,
+    labelOffset: 20,
+    isCircleHidden: true,
+  }))
+
+  const { Component: X1Point } = usePoint(() => ({
+    point: { x: originX.value + 20, y: originY.value },
+    labelText: '1',
+    labelAngle: Math.PI,
+    labelOffset: 20,
+  }))
+  const { Component: Y1Point } = usePoint(() => ({
+    point: { x: originX.value, y: originY.value - 20 },
+    labelText: '1',
+    labelAngle: (3 / 2) * Math.PI,
+    labelOffset: 10,
+  }))
+
+  const Component = () => [
+    XLineComponent(),
+    YLineComponent(),
+    XLineArrowDownHalf(),
+    XLineArrowUpHalf(),
+    XLabel(),
+    YLineArrowLeftHalf(),
+    YLineArrowRightHalf(),
+    YLabel(),
+    X1Point(),
+    Y1Point(),
+  ]
+
+  function convertXCoordinateToSvg(x: number) {
+    return x * 20 + originX.value
+  }
+
+  function convertYCoordinateToSvg(y: number) {
+    return -y * 20 + originY.value
+  }
+
+  function covertCoordinatesToSvg({ x, y }: Point) {
+    return { x: convertXCoordinateToSvg(x), y: convertYCoordinateToSvg(y) }
+  }
+
+  return { Component, covertCoordinatesToSvg, convertXCoordinateToSvg, convertYCoordinateToSvg }
 }

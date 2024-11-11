@@ -194,6 +194,14 @@ export default defineConfig({
               text: 'Vector',
               link: 'vector',
             },
+            {
+              text: 'Dreapta în plan',
+              link: 'dreapta-in-plan',
+            },
+            {
+              text: 'Curbe de ordinul 2',
+              link: 'curbe',
+            },
           ],
         },
       ],

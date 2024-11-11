@@ -11,7 +11,7 @@ const { dataSuffix, reversed = false } = defineProps<{
 const listeningElements = shallowRef<HTMLElement[]>([])
 
 onMounted(() => {
-  listeningElements.value = [...document.querySelectorAll<HTMLElement>(`[data-${dataSuffix}]`)]
+  listeningElements.value = [...document?.querySelectorAll<HTMLElement>(`[data-${dataSuffix}]`)]
 })
 
 const { selectedElementId } = useInteraction(listeningElements)

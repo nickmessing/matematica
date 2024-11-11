@@ -17,3 +17,7 @@
     background: var(--vp-c-default-2);
   }
 }
+
+.dashed {
+  stroke-dasharray: 5, 5;
+}

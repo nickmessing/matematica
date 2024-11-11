@@ -10,7 +10,7 @@ const { dataSuffix } = defineProps<{
 const listeningElements = shallowRef<HTMLElement[]>([])
 
 onMounted(() => {
-  listeningElements.value = [...document.querySelectorAll<HTMLElement>(`[data-${dataSuffix}]`)]
+  listeningElements.value = [...document?.querySelectorAll<HTMLElement>(`[data-${dataSuffix}]`)]
 })
 
 const { selectedElementId } = useInteraction(listeningElements)
@@ -111,17 +111,17 @@ const { Component: CALine } = useLine(() => ({
 const { Component: XLineNotation } = useText(() => ({
   location: xLocation,
   text: 'x',
-  class: isXHighlighted.value ? 'mathnormal svg-node-focused' : 'mathnormal',
+  class: isXHighlighted.value ? 'mathbf svg-node-focused' : 'mathbf',
 }))
 const { Component: YLineNotation } = useText(() => ({
   location: yLocation,
   text: 'y',
-  class: isYHighlighted.value ? 'mathnormal svg-node-focused' : 'mathnormal',
+  class: isYHighlighted.value ? 'mathbf svg-node-focused' : 'mathbf',
 }))
 const { Component: ZLineNotation } = useText(() => ({
   location: zLocation,
   text: 'z = x + y',
-  class: isZHighlighted.value ? 'mathnormal svg-node-focused' : 'mathnormal',
+  class: isZHighlighted.value ? 'mathbf svg-node-focused' : 'mathbf',
 }))
 </script>
 
@@ -161,7 +161,7 @@ const { Component: ZLineNotation } = useText(() => ({
   .z {
     transform-box: fill-box;
     transform-origin: center;
-    transform: translate(6px, 11px) rotateZ(10deg);
+    transform: translate(4px, 13px) rotateZ(10deg);
   }
 }
 </style>

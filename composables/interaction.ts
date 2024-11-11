@@ -62,7 +62,7 @@ export function useInteraction(elements: MaybeRefOrGetter<HTMLElement[]>) {
     },
   )
 
-  useEventListener(document.body, 'click', event => {
+  useEventListener(document?.body, 'click', event => {
     if (!elementsReference.value.some(element => element.contains(event.target as Node) || element === event.target)) {
       selectedElement.value = undefined
     }

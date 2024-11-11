@@ -23,7 +23,7 @@ Orice bipunct
 $\in$
 <span class="clickable-graph" data-id="ab-segment" data-repr>$\overrightarrow{AB}$</span>
 $=$
-<span class="clickable-graph" data-id="ab-segment" data-repr>$v$</span>
+<span class="clickable-graph" data-id="ab-segment" data-repr>$\mathbf{v}$</span>
 din clasa de echivalență a bipunctului
 <span class="clickable-graph" data-id="ab-segment" data-repr>$(A, B)$</span>
 se numește **reprezentant** al vectorului
@@ -51,15 +51,15 @@ se numește **suma vectorilor**
 și se notează cu
 <span class="clickable-graph" data-id="ac-line" data-sum>$\overrightarrow{AC}$</span>.
 
-<span class="clickable-graph" data-id="x-line" data-sum>$x$</span>
+<span class="clickable-graph" data-id="x-line" data-sum>$\mathbf{x}$</span>
 $\;=\;$
 <span class="clickable-graph" data-id="ab-line" data-sum>$\overrightarrow{AB}$</span>
 ,
-<span class="clickable-graph" data-id="y-line" data-sum>$y$</span>
+<span class="clickable-graph" data-id="y-line" data-sum>$\mathbf{y}$</span>
 $\;=\;$
 <span class="clickable-graph" data-id="bc-line" data-sum>$\overrightarrow{BC}$</span>
 ,
-<span class="clickable-graph" data-id="z-line" data-sum>$z$</span>
+<span class="clickable-graph" data-id="z-line" data-sum>$\mathbf{z}$</span>
 $\;=\;$
 <span class="clickable-graph" data-id="ac-line" data-sum>$\overrightarrow{AC}$</span>.
 
@@ -69,34 +69,34 @@ $+$
 $=$
 <span class="clickable-graph" data-id="ac-line" data-sum>$\overrightarrow{AC}$</span>
 $\Leftrightarrow$
-<span class="clickable-graph" data-id="x-line" data-sum>$x$</span>
+<span class="clickable-graph" data-id="x-line" data-sum>$\mathbf{x}$</span>
 $+$
-<span class="clickable-graph" data-id="y-line" data-sum>$y$</span>
+<span class="clickable-graph" data-id="y-line" data-sum>$\mathbf{y}$</span>
 $=$
-<span class="clickable-graph" data-id="z-line" data-sum>$z$</span>.
+<span class="clickable-graph" data-id="z-line" data-sum>$\mathbf{z}$</span>.
 
 <SumaVectorilor dataSuffix="sum" />
 
 ### Înmulțirea Vectorilor cu un Scalar
 
-Fie $\alpha \in \mathbb{R}$ și $x$ un vector.
+Fie $\alpha \in \mathbb{R}$ și $\mathbf{x}$ un vector.
 
-#### $x = \theta$
+#### $\mathbf{x} = \theta$
 
-Dacă $x = \theta$, atunci $\alpha x = \theta$.
+Dacă $\mathbf{x} = \theta$, atunci $\alpha \mathbf{x} = \theta$.
 
 #### $\alpha = 0$
 
-Dacă $\alpha = 0$, atunci $\alpha x = 0 x = \theta$.
+Dacă $\alpha = 0$, atunci $\alpha \mathbf{x} = 0 \mathbf{x} = \theta$.
 
 #### $\alpha > 0$
 
-Dacă $\alpha > 0$ și $x \neq \theta$ atunci:
+Dacă $\alpha > 0$ și $\mathbf{x} \neq \theta$ atunci:
 
 Alegem un bipunct
 <span class="clickable-graph" data-id="oa-segment" data-repr>$(O, A)$</span>
 astfel încât
-<span class="clickable-graph" data-id="oa-segment" data-repr>$x = \overrightarrow{OA}$</span>.
+<span class="clickable-graph" data-id="oa-segment" data-repr>$\mathbf{x} = \overrightarrow{OA}$</span>.
 Pe semidreapta
 <span class="clickable-graph" data-id="oa-semi-line" data-repr>$[OA$</span>
 alegem un punct unic
@@ -112,7 +112,7 @@ $\,|$.
 
 #### $\alpha < 0$
 
-Dacă $\alpha < 0$ și $x \neq \theta$ atunci $\alpha x = -(|\alpha| x)$.
+Dacă $\alpha < 0$ și $\mathbf{x} \neq \theta$ atunci $\alpha \mathbf{x} = -(|\alpha| \mathbf{x})$.
 
 ## Definiții
 
@@ -138,6 +138,22 @@ Vectorul $\overrightarrow{AA}$ se numește **vectorul nul** și se notează cu $
 
 Dacă bipunctul $(A, B)$ este propriu, atunci vectorul $\overrightarrow{BA}$ se numește **vectorul opus** al vectorului $\overrightarrow{AB}$ și se notează cu $-\overrightarrow{AB}$.
 
+### Vectori Paraleli (Coliniari)
+
+Un vector nenul $\mathbf{x} = \overrightarrow{AB}$ este **paralel** cu o dreaptă $d$ dacă și numai dacă dreapta $d$ este paralelă cu dreapta $AB$.
+
+Doi vectori sunt **paraleli** (sau **coliniari**) dacă și numai dacă sunt paraleli cu aceeași dreaptă din $\mathcal{E}_i$.
+
+Vectorul $\theta$ este paralel cu orice vector sau dreaptă.
+
+### Vector Paralel cu un Plan
+
+Fie $i \in \{2, 3\}$ și $\mathbf{x} \in V_i$ un vector nenul. Vectorul $\mathbf{x}$ este **paralel** cu un plan $\pi \in \mathcal{E}_i$ dacă și numai dacă $\mathbf{x}$ este **paralel** cu o dreaptă din planul $\pi$.
+
+Vectorul $\theta$ este paralel cu orice vector, dreaptă sau plan.
+
+Trei vectori sunt **coplanari** dacă și numai dacă sunt paraleli cu același plan.
+
 ## Notații
 
 ### Echivalența Vectorilor
@@ -157,3 +173,15 @@ $\forall A, B, O \in P$, $\exists!X \in P$ astfel încât $\overrightarrow{AB} =
 $$
 \overrightarrow{AB} = \overrightarrow{OX} \Leftrightarrow \overrightarrow{OX} = \overrightarrow{AB}.
 $$
+
+### Teorema Dimensiunii Spațiilor Vectoriale
+
+Pentru $\forall i \in \{1, 2, 3\}$: $\text{dim}(V_i) = i$, adică toate bazele unui spațiu vectorial $V_1$ au un singur vector, toate bazele unui spațiu vectorial $V_2$ au două vectori, iar toate bazele unui spațiu vectorial $V_3$ au trei vectori.
+
+### Teorema Dependenței Liniare
+
+Doi vectori sunt **coliniari** dacă și numai dacă sunt **dependenți liniar**.
+
+### Teorema Coplanarității
+
+Trei vectori liberi sunt coplanari dacă și numai dacă sunt dependenți liniar.
