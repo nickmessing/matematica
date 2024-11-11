@@ -14,3 +14,11 @@ p = \rho(F, d)
 $$
 
 <Parabola />
+
+## Coordonatele focarului
+
+Punctul $F$ are coordonatele $(\dfrac{p}{2}, 0)$ și se numește **focarul** parabolei.
+
+## Funcția directoarei
+
+Dreapta $d$ are ecuația $x = -\dfrac{p}{2}$ și se numește **directoarea** parabolei.
