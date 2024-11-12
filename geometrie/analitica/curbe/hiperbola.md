@@ -1,7 +1,13 @@
+<script setup lang="ts">
+import Hiperbola from './components/Hiperbola.vue'
+</script>
+
 # Hiperbola
 
 Hiperbola este curba de ordinul 2 cu excentricitatea $e > 1$.
 Adică $\rho(M, F) = e \rho(M, d)$.
+
+<Hiperbola />
 
 ## Cheatsheet hiperbolă
 
