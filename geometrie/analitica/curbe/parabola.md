@@ -39,13 +39,15 @@ O(0, 0)
 y_0 - y = p(x - x_0)
 $$
 
-## Distanța de la focar la directoare
+<Parabola />
+
+## Parametrul parabolei
+
+Parametrul parabolei este distanța de la focar la directoare.
 
 $$
 p = \rho(F, d)
 $$
-
-<Parabola />
 
 ## Focarul parabolei
 
@@ -63,14 +65,6 @@ Ecuția directoarei este:
 
 $$
 x = -\dfrac{p}{2} \Leftrightarrow x + \dfrac{p}{2} = 0
-$$
-
-## Parametrul parabolei
-
-Parametrul parabolei este distanța de la focar la directoare.
-
-$$
-p = \rho(F, d)
 $$
 
 ## Ecuația canonică a parabolei

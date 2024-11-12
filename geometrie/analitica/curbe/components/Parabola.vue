@@ -88,6 +88,15 @@ const { Component: FPoint } = usePoint(() => ({
   labelOffset: 15,
   labelAngle: (1 / 4) * Math.PI,
 }))
+const { Component: OPoint } = usePoint(() => ({
+  point: covertCoordinatesToSvg({
+    x: 0,
+    y: 0,
+  }),
+  labelText: 'O',
+  labelOffset: 15,
+  labelAngle: (5 / 4) * Math.PI,
+}))
 
 const { Component: MPoint } = usePoint(() => ({
   point: covertCoordinatesToSvg(pointOnM.value),
@@ -138,6 +147,7 @@ const { Component: FToMLine } = useLine(() => ({
       <MPoint v-if="isMouseOver" />
       <MToDLine v-if="isMouseOver" />
       <FToMLine v-if="isMouseOver" />
+      <OPoint />
     </svg>
   </div>
 </template>

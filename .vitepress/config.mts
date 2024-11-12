@@ -201,6 +201,20 @@ export default defineConfig({
             {
               text: 'Curbe de ordinul 2',
               link: 'curbe',
+              items: [
+                {
+                  text: 'Elipsa',
+                  link: 'curbe/elipsa',
+                },
+                {
+                  text: 'Hiperbola',
+                  link: 'curbe/hiperbola',
+                },
+                {
+                  text: 'Parabola',
+                  link: 'curbe/parabola',
+                },
+              ],
             },
           ],
         },

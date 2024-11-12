@@ -16,3 +16,4 @@ se numește **curbă de ordinul 2** cu **excentricitatea** $e$.
 ## Tipuri:
 
 - [Parabolă ($e = 1$)](./parabola.md)
+- [Elipsă ($0 < e < 1$)](./elipsa.md)
