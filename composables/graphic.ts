@@ -306,9 +306,9 @@ export function useCoordinates(options: MaybeRefOrGetter<UseCoordinatesOptions>)
     return -y * 20 + originY.value
   }
 
-  function covertCoordinatesToSvg({ x, y }: Point) {
+  function convertCoordinatesToSvg({ x, y }: Point) {
     return { x: convertXCoordinateToSvg(x), y: convertYCoordinateToSvg(y) }
   }
 
-  return { Component, covertCoordinatesToSvg, convertXCoordinateToSvg, convertYCoordinateToSvg }
+  return { Component, convertCoordinatesToSvg, convertXCoordinateToSvg, convertYCoordinateToSvg }
 }

@@ -1,7 +1,13 @@
+<script setup lang="ts">
+import Elipsa from './components/Elipsa.vue'
+</script>
+
 # Elipsa
 
 Elipsa este curba de ordinul 2 cu excentricitatea $0 < e < 1$.
 Adică $\rho(M, F) < \rho(M, d)$.
+
+<Elipsa />
 
 ## Cheatsheet elipsă
 

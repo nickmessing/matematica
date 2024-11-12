@@ -7,6 +7,8 @@ import Parabola from './components/Parabola.vue'
 Parabola este curba de ordinul 2 cu excentricitatea $e = 1$.
 Adică $\rho(M, F) = \rho(M, d)$
 
+<Parabola />
+
 ## Cheatsheet parabola
 
 $$
@@ -38,8 +40,6 @@ O(0, 0)
 \textbf{Ecuția} \text{ tangentei în punctul } M_0(x_0, y_0) \text{:} \newline
 y_0 - y = p(x - x_0)
 $$
-
-<Parabola />
 
 ## Parametrul parabolei
 

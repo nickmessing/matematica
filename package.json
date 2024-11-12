@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",
+    "@vue/tsconfig": "^0.6.0",
     "type-fest": "^4.26.1"
   }
 }

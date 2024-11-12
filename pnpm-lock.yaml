@@ -27,6 +27,9 @@ importers:
       '@types/d3':
         specifier: ^7.4.3
         version: 7.4.3
+      '@vue/tsconfig':
+        specifier: ^0.6.0
+        version: 0.6.0(vue@3.5.12)
       type-fest:
         specifier: ^4.26.1
         version: 4.26.1
@@ -565,6 +568,17 @@ packages:
 
   '@vue/shared@3.5.12':
     resolution: {integrity: sha512-L2RPSAwUFbgZH20etwrXyVyCBu9OxRSi8T/38QsvnkJyvq2LufW2lDCOzm7t/U9C1mkhJGWYfCuFBCmIuNivrg==}
+
+  '@vue/tsconfig@0.6.0':
+    resolution: {integrity: sha512-MHXNd6lzugsEHvuA6l1GqrF5jROqUon8sP/HInLPnthJiYvB0VvpHMywg7em1dBZfFZNBSkR68qH37zOdRHmCw==}
+    peerDependencies:
+      typescript: 5.x
+      vue: ^3.3.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vue:
+        optional: true
 
   '@vueuse/core@11.1.0':
     resolution: {integrity: sha512-P6dk79QYA6sKQnghrUz/1tHi0n9mrb/iO1WTMk/ElLmTyNqgDeSZ3wcDf6fRBGzRJbeG1dxzEOvLENMjr+E3fg==}
@@ -1568,6 +1582,10 @@ snapshots:
       vue: 3.5.12
 
   '@vue/shared@3.5.12': {}
+
+  '@vue/tsconfig@0.6.0(vue@3.5.12)':
+    optionalDependencies:
+      vue: 3.5.12
 
   '@vueuse/core@11.1.0(vue@3.5.12)':
     dependencies:

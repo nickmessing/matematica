@@ -21,7 +21,7 @@ const {
   Component: Coordinates,
   convertXCoordinateToSvg,
   convertYCoordinateToSvg,
-  covertCoordinatesToSvg,
+  convertCoordinatesToSvg,
 } = useCoordinates({
   height: 220,
   width: 360,
@@ -80,7 +80,7 @@ const isMouseOver = ref(false)
 const mouseProgress = computed(() => y.value / 220)
 
 const { Component: FPoint } = usePoint(() => ({
-  point: covertCoordinatesToSvg({
+  point: convertCoordinatesToSvg({
     x: p.value / 2,
     y: 0,
   }),
@@ -89,7 +89,7 @@ const { Component: FPoint } = usePoint(() => ({
   labelAngle: (1 / 4) * Math.PI,
 }))
 const { Component: OPoint } = usePoint(() => ({
-  point: covertCoordinatesToSvg({
+  point: convertCoordinatesToSvg({
     x: 0,
     y: 0,
   }),
@@ -99,7 +99,7 @@ const { Component: OPoint } = usePoint(() => ({
 }))
 
 const { Component: MPoint } = usePoint(() => ({
-  point: covertCoordinatesToSvg(pointOnM.value),
+  point: convertCoordinatesToSvg(pointOnM.value),
   labelText: 'M',
   labelAngle: Math.PI - Math.PI * mouseProgress.value,
 }))
@@ -112,8 +112,8 @@ const { Component: MToDLine } = useLine(() => ({
 }))
 const { Component: FToMLine } = useLine(() => ({
   line: {
-    start: covertCoordinatesToSvg({ x: p.value / 2, y: 0 }),
-    end: covertCoordinatesToSvg(pointOnM.value),
+    start: convertCoordinatesToSvg({ x: p.value / 2, y: 0 }),
+    end: convertCoordinatesToSvg(pointOnM.value),
   },
   lineClass: 'dashed',
 }))
