@@ -217,13 +217,5 @@ const { Component: Asymptote2 } = useLine(() => ({
     height: 220px;
     color: var(--vp-c-text-1);
   }
-
-  .dashed {
-    stroke-dasharray: 5, 5;
-  }
-
-  .asymptote {
-    stroke: red;
-  }
 }
 </style>
