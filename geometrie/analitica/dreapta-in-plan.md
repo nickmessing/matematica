@@ -130,3 +130,11 @@ A x + B y + C = 0
 $$
 
 Conform celor de mai sus $v$ are coordonatele $(-B, A)$.
+
+### Ecuația dreptei perpendiculare pe $d$
+
+Dacă $d: A x + B y + C = 0$, atunci dreapta perpendiculară pe $d$ este:
+
+$$
+B x - A y + D = 0
+$$
