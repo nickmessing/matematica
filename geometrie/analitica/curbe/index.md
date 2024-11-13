@@ -17,3 +17,4 @@ se numește **curbă de ordinul 2** cu **excentricitatea** $e$.
 
 - [Parabolă ($e = 1$)](./parabola.md)
 - [Elipsă ($0 < e < 1$)](./elipsa.md)
+- [Hiperbolă ($e > 1$)](./hiperbola.md)
