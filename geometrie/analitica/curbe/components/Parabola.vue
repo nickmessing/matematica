@@ -149,6 +149,23 @@ const { Component: FToMLine } = useLine(() => ({
       <FToMLine v-if="isMouseOver" />
       <OPoint />
     </svg>
+    <p v-if="pointOnM && isMouseOver" class="katex-block">
+      <span class="katex-display">
+        <span class="katex">
+          <span class="katex-html" aria-hidden="true">
+            <span class="base">
+              <span class="strut" style="height: 1em; vertical-align: -0.25em"></span>
+              <span class="mord mathnormal" style="margin-right: 0.10903em">M</span><span class="mopen">(</span>
+              <span class="mord">{{ pointOnM.x.toFixed(2) }}</span>
+              <span class="mpunct">,</span>
+              <span class="mspace" style="margin-right: 0.1667em"></span>
+              <span class="mord">{{ pointOnM.y.toFixed(2) }}</span>
+              <span class="mclose">)</span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </p>
   </div>
 </template>
 
