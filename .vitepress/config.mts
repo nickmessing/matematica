@@ -268,7 +268,7 @@ export default defineConfig({
       next: 'Pagina următoare',
     },
   },
-  head: [['link', { rel: 'stylesheet', href: 'https://esm.sh/v135/katex@0.16.11/dist/katex.min.css' }]],
+  // head: [['link', { rel: 'stylesheet', href: 'https://esm.sh/v135/katex@0.16.11/dist/katex.min.css' }]],
   markdown: {
     config: md => {
       md.use(katex, {
