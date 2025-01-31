@@ -62,11 +62,15 @@ export function useInteraction(elements: MaybeRefOrGetter<HTMLElement[]>) {
     },
   )
 
-  useEventListener(document?.body, 'click', event => {
-    if (!elementsReference.value.some(element => element.contains(event.target as Node) || element === event.target)) {
-      selectedElement.value = undefined
-    }
-  })
+  if (typeof document !== 'undefined') {
+    useEventListener(document?.body, 'click', event => {
+      if (
+        !elementsReference.value.some(element => element.contains(event.target as Node) || element === event.target)
+      ) {
+        selectedElement.value = undefined
+      }
+    })
+  }
 
   onScopeDispose(() => {
     for (const listener of listenersToRemove.value) {
